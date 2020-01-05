@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://people.csail.mit.edu/jstraub/feed.xml" rel="self" type="application/atom+xml" /><link href="http://people.csail.mit.edu/jstraub/" rel="alternate" type="text/html" /><updated>2020-01-05T09:03:09-08:00</updated><id>http://people.csail.mit.edu/jstraub/</id><title>Julian Straub</title><subtitle>developing artificial 3D perception</subtitle><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><entry><title>DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation</title><link href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" rel="alternate" type="text/html" title="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation" /><published>2019-03-01T00:00:00-08:00</published><updated>2019-03-01T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">&lt;p&gt;Computer graphics, 3D computer vision and robotics communities have produced
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://people.csail.mit.edu/jstraub/feed.xml" rel="self" type="application/atom+xml" /><link href="http://people.csail.mit.edu/jstraub/" rel="alternate" type="text/html" /><updated>2020-01-05T12:13:14-08:00</updated><id>http://people.csail.mit.edu/jstraub/</id><title>Julian Straub</title><subtitle>developing artificial 3D perception</subtitle><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><entry><title>StereoDRNet: Dilated Residual Stereo Net</title><link href="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/" rel="alternate" type="text/html" title="StereoDRNet: Dilated Residual Stereo Net" /><published>2019-06-15T00:00:00-07:00</published><updated>2019-06-15T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/">&lt;p&gt;We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene. Our proposed depth refinement architecture, predicts view-consistent disparity and occlusion maps that helps the fusion system to produce geometrically consistent reconstructions. We utilize 3D dilated convolutions in our proposed cost filtering network that yields better filtering while almost halving the computational cost in comparison to state of the art cost filtering architectures. For feature extraction we use the Vortex Pooling architecture. The proposed method achieves state of the art results in KITTI 2012, KITTI 2015 and ETH 3D stereo benchmarks.  Finally, we demonstrate that our system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{
+  title={StereoDRNet: Dilated Residual Stereo Net},
+  author={Chabra, Rohan and Straub, Julian and Sweeny, Chris and Newcombe, Richard and Fuchs, Henry},
+  booktitle ={CVPR},
+  year={2019}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene. Our proposed depth refinement architecture, predicts view-consistent disparity and occlusion maps that helps the fusion system to produce geometrically consistent reconstructions. We utilize 3D dilated convolutions in our proposed cost filtering network that yields better filtering while almost halving the computational cost in comparison to state of the art cost filtering architectures. For feature extraction we use the Vortex Pooling architecture. The proposed method achieves state of the art results in KITTI 2012, KITTI 2015 and ETH 3D stereo benchmarks.  Finally, we demonstrate that our system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.</summary></entry><entry><title>DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation</title><link href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" rel="alternate" type="text/html" title="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation" /><published>2019-03-01T00:00:00-08:00</published><updated>2019-03-01T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">&lt;p&gt;Computer graphics, 3D computer vision and robotics communities have produced
 multiple approaches to representing 3D geometry for rendering and
 reconstruction. These provide trade-offs across fidelity, efficiency and
 compression capabilities. In this work, we introduce DeepSDF, a learned
@@ -43,7 +53,21 @@ classical SDF’s both in analytical or discretized voxel form typically represe
 the surface of a single shape, DeepSDF can represent an entire class of shapes.
 Furthermore, we show state-of-the-art performance for learned 3D shape
 representation and completion while reducing the model size by an order of
-magnitude compared with previous work.</summary></entry><entry><title>PCT 2017 the year of ice and fire</title><link href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" rel="alternate" type="text/html" title="PCT 2017 the year of ice and fire" /><published>2018-03-31T00:00:00-07:00</published><updated>2018-03-31T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/">&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170515-081518.jpg&quot; alt=&quot;2017/05/15 08:15:18&quot; /&gt; 
+magnitude compared with previous work.</summary></entry><entry><title>Reconstructing Scenes with Mirror and Glass Surfaces</title><link href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" rel="alternate" type="text/html" title="Reconstructing Scenes with Mirror and Glass Surfaces" /><published>2018-08-01T00:00:00-07:00</published><updated>2018-08-01T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/">&lt;p&gt;Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{whelan2018reconstructing,
+  title={Reconstructing scenes with mirror and glass surfaces},
+  author={Whelan, Thomas and Goesele, Michael and Lovegrove, Steven J and Straub, Julian and Green, Simon and Szeliski, Richard and Butterfield, Steven and Verma, Shobhit and Newcombe, Richard},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={37},
+  number={4},
+  pages={102},
+  year={2018},
+  publisher={ACM}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.</summary></entry><entry><title>PCT 2017 the year of ice and fire</title><link href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" rel="alternate" type="text/html" title="PCT 2017 the year of ice and fire" /><published>2018-03-31T00:00:00-07:00</published><updated>2018-03-31T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/">&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170515-081518.jpg&quot; alt=&quot;2017/05/15 08:15:18&quot; /&gt; 
 &lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170515-092025.jpg&quot; alt=&quot;2017/05/15 09:20:25&quot; /&gt;
 &lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170516-090358.jpg&quot; alt=&quot;2017/05/16 09:03:58&quot; /&gt;
 &lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170516-120928.jpg&quot; alt=&quot;2017/05/16 12:09:28&quot; /&gt;
@@ -621,116 +645,4 @@ can trigger a SOS from the device if something would go wrong.</summary></entry>
   url = {https://arxiv.org/abs/1603.04868}
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Point cloud alignment is a common problem in computer vision and robotics, with applications ranging from 3D object recognition to reconstruction.  We propose a novel approach to the alignment problem that utilizes Bayesian nonparametrics to describe the point cloud and surface normal densities, and branch and bound (BB) optimization to recover the relative transformation.  BB uses a novel, refinable, near-uniform tessellation of  rotation space using 4D tetrahedra, leading to more efficient optimization compared to the common axis-angle tessellation.  We provide objective function bounds for pruning given the proposed tessellation, and prove that BB converges to the optimum of the cost function along with providing its computational complexity.  Finally, we empirically demonstrate the efficiency of the proposed approach as well as its robustness to real-world conditions such as missing data and partial overlap.</summary></entry><entry><title>The Manhattan Frame Model-Manhattan World Inference in the Space of Surface Normals</title><link href="http://people.csail.mit.edu/jstraub/pub/The-Manhattan-Frame-Model-Manhattan-World-Inference-in-the-Space-of-Surface-Normals/" rel="alternate" type="text/html" title="The Manhattan Frame Model-Manhattan World Inference in the Space of Surface Normals" /><published>2017-02-15T00:00:00-08:00</published><updated>2017-02-15T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/pub/The-Manhattan-Frame-Model-Manhattan-World-Inference-in-the-Space-of-Surface-Normals</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/The-Manhattan-Frame-Model-Manhattan-World-Inference-in-the-Space-of-Surface-Normals/">&lt;p&gt;Objects and structures within man-made environments typically exhibit a
-high degree of organization in the form of orthogonal and parallel
-planes. Traditional approaches utilize these regularities via the
-restrictive, and rather local, Manhattan World (MW) assumption which
-posits that every plane is perpendicular to one of the axes of a single
-coordinate system. The aforementioned regularities are especially
-evident in the surface normal distribution of a scene where they
-manifest as orthogonally-coupled clusters.  This motivates the
-introduction of the Manhattan-Frame (MF) model which captures the
-notion of a MW in the surface normals space, the unit sphere, and two
-probabilistic MF models over this space.  First, for a single MF we
-propose novel real-time MAP inference algorithms, evaluate their
-performance and their use in drift-free rotation estimation. Second, to
-capture the complexity of real-world scenes at a global scale, we
-extend the MF model to a probabilistic mixture of Manhattan Frames
-(MMF). For MMF inference we propose a simple MAP inference algorithm
-and an adaptive Markov-Chain Monte-Carlo sampling algorithm with
-Metropolis-Hastings split/merge moves that let us infer the unknown
-number of mixture components. We demonstrate the versatility of the MMF
-model and inference algorithm across several scales of man-made
-environments.&lt;/p&gt;
-
-&lt;h2 id=&quot;mixture-of-manhattan-frames-code&quot;&gt;Mixture of Manhattan Frames Code&lt;/h2&gt;
-
-&lt;p&gt;We are releasing the MMF inference code under an academic license. You
-can download it from
-&lt;a href=&quot;http://people.csail.mit.edu/jstraub/mmf-code/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;mixture-of-manhattan-frames-extracted-from-nyu-depth-dataset-v2&quot;&gt;Mixture of Manhattan Frames extracted from NYU depth dataset v2&lt;/h2&gt;
-
-&lt;p&gt;We ran the MMF inference on the full NYU depth dataset v2 [&lt;a href=&quot;http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html&quot;&gt;Silberman
-2012&lt;/a&gt;]
-consisting of 1449 RGB-D frames and provide the results as a dataset
-which can be found
-&lt;a href=&quot;http://people.csail.mit.edu/jstraub/_pages/nyu-mmf-dataset/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@inproceedings{straub2017manhattan,
-  author = {Straub, Julian and Freifeld, Oren and Rosman, Guy and Leonard, John J. and Fisher III, John W.},
-  title = {The Manhattan Frame Model---Manhattan World Inference in the Space of Surface Normals},
-  year = {2017},
-  booktitle ={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
-  url ={ http://people.csail.mit.edu/jstraub/download/straub2017manhattan.pdf}
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Objects and structures within man-made environments typically exhibit a
-high degree of organization in the form of orthogonal and parallel
-planes. Traditional approaches utilize these regularities via the
-restrictive, and rather local, Manhattan World (MW) assumption which
-posits that every plane is perpendicular to one of the axes of a single
-coordinate system. The aforementioned regularities are especially
-evident in the surface normal distribution of a scene where they
-manifest as orthogonally-coupled clusters.  This motivates the
-introduction of the Manhattan-Frame (MF) model which captures the
-notion of a MW in the surface normals space, the unit sphere, and two
-probabilistic MF models over this space.  First, for a single MF we
-propose novel real-time MAP inference algorithms, evaluate their
-performance and their use in drift-free rotation estimation. Second, to
-capture the complexity of real-world scenes at a global scale, we
-extend the MF model to a probabilistic mixture of Manhattan Frames
-(MMF). For MMF inference we propose a simple MAP inference algorithm
-and an adaptive Markov-Chain Monte-Carlo sampling algorithm with
-Metropolis-Hastings split/merge moves that let us infer the unknown
-number of mixture components. We demonstrate the versatility of the MMF
-model and inference algorithm across several scales of man-made
-environments.</summary></entry><entry><title>The Power Of Connectedness</title><link href="http://people.csail.mit.edu/jstraub/blog/the-power-of-connectedness/" rel="alternate" type="text/html" title="The Power Of Connectedness" /><published>2017-01-08T00:00:00-08:00</published><updated>2017-01-08T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/blog/the-power-of-connectedness</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/the-power-of-connectedness/">&lt;p&gt;Connectedness is crucial for successful leadership and
-mentoring since it directly leads to a sense of responsibility.
-The feeling of connectedness can be cultivated by meditation, which at
-its core is about dissolving the feeling of &lt;em&gt;self&lt;/em&gt; which often
-separates us from others.
-Here is how connectedness manifested in my life without active effort besides
-daily meditation (no chanting or religious mumbo jumbo).&lt;/p&gt;
-
-&lt;p&gt;In the fall of 2015, I started to mentor three undergraduate students
-on two separate projects. As has repeatedly happened for my in fall, I
-was overworked and stressed because of major conference deadlines and
-an unusually high amount of travel to present previously published
-work. This all led to me being mostly focused onto my own stuff and
-seeing the additional mentoring responsibility as a burden rather than
-a fun opportunity to serve. Accordingly, I did not spend much time with
-my mentees leaving them mostly unguided in their struggles.&lt;/p&gt;
-
-&lt;p&gt;Then in January 2016, I attended a meditation workshop during
-MIT’s independent activities period (IAP). Focused on developing
-happiness and satisfaction in live through connectedness, service, yoga
-and meditation, the workshop changed my life.
-Soon, I was finding myself spending more and more time with my mentees.
-Taking the time to show them some C++ trick, helping them with some
-tricky piece of math or giving them detailed feedback on their project
-writeup.
-I felt connected to them and with that came a profound sense of
-responsibility. They were at a point in their education where all
-the attention and feedback that I received from my mentors had a huge
-impact on my way of working and thinking. I am deeply grateful for all
-my mentors. And helping my mentees became a way of giving back that feels deeply satisfying.
-Seeing them succeed (they all received awards for the work
-from the department) was an exhilarating side product.
-I am convinced this connection can be felt on the receiving side as
-well and it probably motivates as well.&lt;/p&gt;
-
-&lt;p&gt;Since the workshop in January 2016, I have been meditating every
-morning and I am convinced that this was key to developing and
-maintaining this feeling of connectedness not only with my mentees but
-generally with the people in my life.
-Feeling connected to a person directly translates into a
-feeling of responsibility because you are not separate entities
-anymore. Serving and helping her helps you both.&lt;/p&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Connectedness is crucial for successful leadership and
-mentoring since it directly leads to a sense of responsibility.
-The feeling of connectedness can be cultivated by meditation, which at
-its core is about dissolving the feeling of self which often
-separates us from others.
-Here is how connectedness manifested in my life without active effort besides
-daily meditation (no chanting or religious mumbo jumbo).</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Point cloud alignment is a common problem in computer vision and robotics, with applications ranging from 3D object recognition to reconstruction.  We propose a novel approach to the alignment problem that utilizes Bayesian nonparametrics to describe the point cloud and surface normal densities, and branch and bound (BB) optimization to recover the relative transformation.  BB uses a novel, refinable, near-uniform tessellation of  rotation space using 4D tetrahedra, leading to more efficient optimization compared to the common axis-angle tessellation.  We provide objective function bounds for pruning given the proposed tessellation, and prove that BB converges to the optimum of the cost function along with providing its computational complexity.  Finally, we empirically demonstrate the efficiency of the proposed approach as well as its robustness to real-world conditions such as missing data and partial overlap.</summary></entry></feed>

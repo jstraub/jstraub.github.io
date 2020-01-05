@@ -19,7 +19,7 @@
 
 
 
-<title>DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation - Julian Straub</title>
+<title>Reconstructing Scenes with Mirror and Glass Surfaces - Julian Straub</title>
 
 
 
@@ -29,15 +29,15 @@
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Julian Straub">
-<meta property="og:title" content="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation">
+<meta property="og:title" content="Reconstructing Scenes with Mirror and Glass Surfaces">
 
 
-  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">
-  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">
+  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/">
+  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/">
 
 
 
-  <meta property="og:description" content="Computer graphics, 3D computer vision and robotics communities have producedmultiple approaches to representing 3D geometry for rendering andreconstruction. These provide trade-offs across fidelity, efficiency andcompression capabilities. In this work, we introduce DeepSDF, a learnedcontinuous Signed Distance Function (SDF) representation of a class of shapesthat enables high quality shape representation, interpolation and completionfrom partial and noisy 3D input data. DeepSDF, like its classical counterpart,represents a shape’s surface by a continuous volumetric field: the magnitude ofa point in the field represents the distance to the surface boundary and thesign indicates whether the region is inside (-) or outside (+) of the shape,hence our representation implicitly encodes a shape’s boundary as thezero-level-set of the learned function while explicitly representing theclassification of space as being part of the shapes interior or not. Whileclassical SDF’s both in analytical or discretized voxel form typically representthe surface of a single shape, DeepSDF can represent an entire class of shapes.Furthermore, we show state-of-the-art performance for learned 3D shaperepresentation and completion while reducing the model size by an order ofmagnitude compared with previous work.">
+  <meta property="og:description" content="Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.">
 
 
 
@@ -49,12 +49,12 @@
 
 
 
-  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDeepSDF.png">
+  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images/mirrorAndGlass.png">
 
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2019-03-01T00:00:00-08:00">
+  <meta property="article:published_time" content="2018-08-01T00:00:00-07:00">
 
 
 
@@ -149,15 +149,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation">
-    <meta itemprop="description" content="Computer graphics, 3D computer vision and robotics communities have producedmultiple approaches to representing 3D geometry for rendering andreconstruction. These provide trade-offs across fidelity, efficiency andcompression capabilities. In this work, we introduce DeepSDF, a learnedcontinuous Signed Distance Function (SDF) representation of a class of shapesthat enables high quality shape representation, interpolation and completionfrom partial and noisy 3D input data. DeepSDF, like its classical counterpart,represents a shape’s surface by a continuous volumetric field: the magnitude ofa point in the field represents the distance to the surface boundary and thesign indicates whether the region is inside (-) or outside (+) of the shape,hence our representation implicitly encodes a shape’s boundary as thezero-level-set of the learned function while explicitly representing theclassification of space as being part of the shapes interior or not. Whileclassical SDF’s both in analytical or discretized voxel form typically representthe surface of a single shape, DeepSDF can represent an entire class of shapes.Furthermore, we show state-of-the-art performance for learned 3D shaperepresentation and completion while reducing the model size by an order ofmagnitude compared with previous work.">
-    <meta itemprop="datePublished" content="March 01, 2019">
+    <meta itemprop="headline" content="Reconstructing Scenes with Mirror and Glass Surfaces">
+    <meta itemprop="description" content="Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.">
+    <meta itemprop="datePublished" content="August 01, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+          <h1 class="page__title" itemprop="headline">Reconstructing Scenes with Mirror and Glass Surfaces
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -172,32 +172,18 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>Computer graphics, 3D computer vision and robotics communities have produced
-multiple approaches to representing 3D geometry for rendering and
-reconstruction. These provide trade-offs across fidelity, efficiency and
-compression capabilities. In this work, we introduce DeepSDF, a learned
-continuous Signed Distance Function (SDF) representation of a class of shapes
-that enables high quality shape representation, interpolation and completion
-from partial and noisy 3D input data. DeepSDF, like its classical counterpart,
-represents a shape’s surface by a continuous volumetric field: the magnitude of
-a point in the field represents the distance to the surface boundary and the
-sign indicates whether the region is inside (-) or outside (+) of the shape,
-hence our representation implicitly encodes a shape’s boundary as the
-zero-level-set of the learned function while explicitly representing the
-classification of space as being part of the shapes interior or not. While
-classical SDF’s both in analytical or discretized voxel form typically represent
-the surface of a single shape, DeepSDF can represent an entire class of shapes.
-Furthermore, we show state-of-the-art performance for learned 3D shape
-representation and completion while reducing the model size by an order of
-magnitude compared with previous work.</p>
+        <p>Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.</p>
 
 <h2 id="bibtex-a-idbibtexa">Bibtex <a id="bibtex"></a></h2>
-<div class="highlighter-rouge"><pre class="highlight"><code>@InProceedings{Park_2019_CVPR,
-  author = {Park, Jeong Joon and Florence, Peter and Straub, Julian and Newcombe, Richard and Lovegrove, Steven},
-  title = {DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation},
-  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-  month = {June},
-  year = {2019}
+<div class="highlighter-rouge"><pre class="highlight"><code>@article{whelan2018reconstructing,
+  title={Reconstructing scenes with mirror and glass surfaces},
+  author={Whelan, Thomas and Goesele, Michael and Lovegrove, Steven J and Straub, Julian and Green, Simon and Szeliski, Richard and Butterfield, Steven and Verma, Shobhit and Newcombe, Richard},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={37},
+  number={4},
+  pages={102},
+  year={2018},
+  publisher={ACM}
 }
 </code></pre>
 </div>
@@ -235,7 +221,7 @@ magnitude compared with previous work.</p>
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-03-01T00:00:00-08:00">March 01, 2019</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-01T00:00:00-07:00">August 01, 2018</time></p>
         
       </footer>
 
@@ -246,13 +232,13 @@ magnitude compared with previous work.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Reconstructing Scenes with Mirror and Glass Surfaces http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -261,11 +247,11 @@ magnitude compared with previous work.</p>
 
   <nav class="pagination">
     
-      <a href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="pagination--pager" title="Reconstructing Scenes with Mirror and Glass Surfaces
+      <a href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" class="pagination--pager" title="PCT 2017 the year of ice and fire
 ">Previous</a>
     
     
-      <a href="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/" class="pagination--pager" title="StereoDRNet: Dilated Residual Stereo Net
+      <a href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="pagination--pager" title="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
 ">Next</a>
     
   </nav>
@@ -332,14 +318,14 @@ magnitude compared with previous work.</p>
       <div class="archive__item-teaser">
         <img src=
           
-            "http://people.csail.mit.edu/jstraub/images/mirrorAndGlass.png"
+            "http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDeepSDF.png"
           
           alt="">
       </div>
     
     <h3 class="archive__item-title" itemprop="headline">
       
-        <a href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" rel="permalink">Reconstructing Scenes with Mirror and Glass Surfaces
+        <a href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" rel="permalink">DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
 </a>
       
     </h3>
@@ -352,7 +338,9 @@ magnitude compared with previous work.</p>
 	
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they ...</p>
+    <p class="archive__item-excerpt" itemprop="description">Computer graphics, 3D computer vision and robotics communities have produced
+multiple approaches to representing 3D geometry for rendering and
+reconstruction...</p>
   </article>
 </div>
 

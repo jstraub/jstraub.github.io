@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/</loc>
+<lastmod>2019-06-15T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/</loc>
 <lastmod>2019-03-01T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/</loc>
+<lastmod>2018-08-01T00:00:00-07:00</lastmod>
 </url>
 <url>
 <loc>http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/</loc>
