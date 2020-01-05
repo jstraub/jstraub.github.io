@@ -1,0 +1,317 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Bayesian Inference with the von-Mises-Fisher Distribution - Julian Straub</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Julian Straub">
+<meta property="og:title" content="Bayesian Inference with the von-Mises-Fisher Distribution">
+
+
+  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/">
+  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/">
+
+
+
+  <meta property="og:description" content="In thiswriteup,I give an introduction to the von-Mises-Fisher (vMF) distribution whichis a commonly used isotropic distribution for directional data. Thewriteup is an excerpt of my PhD thesis with a focus on Bayesianinference and computational considerations when working with the vMFdistribution.  While the initial discussion is general, some of theresults and derivations for efficient inference are specialized to 3Ddirectional data. Specifically, after the introduction of the vMFdistribution and two different conjugate prior distributions, I outlinegeneral sampling from the posterior vMF distribution before derivingthe normalization of the prior and the marginal data distribution for3D. The last two sections show the cumulative density function and theentropy for the 3D vMF distribution.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images/pub/vMF3D_teaser.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-05-01T00:00:00-07:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Julian Straub",
+      "url" : "http://people.csail.mit.edu/jstraub",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://people.csail.mit.edu/jstraub/feed.xml" type="application/atom+xml" rel="alternate" title="Julian Straub Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://people.csail.mit.edu/jstraub/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://people.csail.mit.edu/jstraub/">Julian Straub</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/pub/index.html">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/blog/index.html">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/photography/index.html">Photography</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/nyu-mmf-dataset/index.html">MMF Dataset</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bayesian Inference with the von-Mises-Fisher Distribution">
+    <meta itemprop="description" content="In thiswriteup,I give an introduction to the von-Mises-Fisher (vMF) distribution whichis a commonly used isotropic distribution for directional data. Thewriteup is an excerpt of my PhD thesis with a focus on Bayesianinference and computational considerations when working with the vMFdistribution.  While the initial discussion is general, some of theresults and derivations for efficient inference are specialized to 3Ddirectional data. Specifically, after the introduction of the vMFdistribution and two different conjugate prior distributions, I outlinegeneral sampling from the posterior vMF distribution before derivingthe normalization of the prior and the marginal data distribution for3D. The last two sections show the cumulative density function and theentropy for the 3D vMF distribution.">
+    <meta itemprop="datePublished" content="May 01, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Bayesian Inference with the von-Mises-Fisher Distribution
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+<p>In <a href="http://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInference.pdf">this
+writeup</a>,
+I give an introduction to the von-Mises-Fisher (vMF) distribution which
+is a commonly used isotropic distribution for directional data. The
+writeup is an excerpt of my <a href="http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/index.html">PhD thesis</a> with a focus on Bayesian
+inference and computational considerations when working with the vMF
+distribution.  While the initial discussion is general, some of the
+results and derivations for efficient inference are specialized to 3D
+directional data. Specifically, after the introduction of the vMF
+distribution and two different conjugate prior distributions, I outline
+general sampling from the posterior vMF distribution before deriving
+the normalization of the prior and the marginal data distribution for
+3D. The last two sections show the cumulative density function and the
+entropy for the 3D vMF distribution.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://people.csail.mit.edu/jstraub/categories/#pub" class="page__taxonomy-item" rel="tag">pub</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-05-01T00:00:00-07:00">May 01, 2017</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Bayesian Inference with the von-Mises-Fisher Distribution http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://people.csail.mit.edu/jstraub/blog/PCT-GPD-tracks_for-inReach/" class="pagination--pager" title="Pacific Crest Trail GPS Tracks for Garmin inReach
+">Previous</a>
+    
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/" class="pagination--pager" title="Nonparametric Directional Perception
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/jstraub"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://people.csail.mit.edu/jstraub/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Julian Straub. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://people.csail.mit.edu/jstraub/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49442816-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>

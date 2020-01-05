@@ -1,0 +1,546 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>A Dirichlet Process Mixture Model for Spherical Data - Julian Straub</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Julian Straub">
+<meta property="og:title" content="A Dirichlet Process Mixture Model for Spherical Data">
+
+
+  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/">
+  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/">
+
+
+
+  <meta property="og:description" content="Directional data, naturally represented as points on the unit sphere, appear in many applications. We propose a Dirichlet process mixture model of Gaussian distributions in distinct tangent spaces (DP-TGMM) to the sphere and develop an efficient inference algorithm. We demonstrate that, unlike related work, the proposed probabilistic model can represent anisotropic distributions on the sphere while still respecting the underlying geometry and readily extends to high-dimensional data.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images//tumbnails/dptgmm_tn.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2015-01-01T00:00:00-08:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Julian Straub",
+      "url" : "http://people.csail.mit.edu/jstraub",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://people.csail.mit.edu/jstraub/feed.xml" type="application/atom+xml" rel="alternate" title="Julian Straub Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://people.csail.mit.edu/jstraub/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://people.csail.mit.edu/jstraub/">Julian Straub</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/pub/index.html">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/blog/index.html">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/photography/index.html">Photography</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/nyu-mmf-dataset/index.html">MMF Dataset</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="A Dirichlet Process Mixture Model for Spherical Data">
+    <meta itemprop="description" content="Directional data, naturally represented as points on the unit sphere, appear in many applications. We propose a Dirichlet process mixture model of Gaussian distributions in distinct tangent spaces (DP-TGMM) to the sphere and develop an efficient inference algorithm. We demonstrate that, unlike related work, the proposed probabilistic model can represent anisotropic distributions on the sphere while still respecting the underlying geometry and readily extends to high-dimensional data.">
+    <meta itemprop="datePublished" content="January 01, 2015">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">A Dirichlet Process Mixture Model for Spherical Data
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  3 minute read
+	
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+<p>Directional data, naturally represented as points on the unit sphere,
+appear in many applications. However, unlike the case of Euclidean
+data, flexible mixture models on the sphere that can capture
+correlations, handle an unknown number of components and extend readily
+to high-dimensional data have yet to be suggested. For this purpose we
+propose a Dirichlet process mixture model of Gaussian distributions in
+distinct tangent spaces (DP-TGMM) to the sphere. Importantly, the
+formulation of the proposed model allows the extension of recent
+advances in efficient inference for Bayesian nonparametric models to
+the spherical domain. Experiments on synthetic data as well as
+real-world 3D surface normal and 20-dimensional semantic word vector
+data confirm the expressiveness and applicability of the DP-TGMM.</p>
+
+<p><img src="http://people.csail.mit.edu/jstraub/images/pub/dptgmm/figureGraphicalModel.png" alt="Graphical Model" title="Graphical Model" /></p>
+
+<p>Many applications of interest involve measurements of directional data.
+In 3D scenes, unit-length surface normals extracted from point clouds
+reside in a 2D manifold (i.e., the unit sphere in 3D). In biology,
+protein backbone measurements are described and classified based on
+their angular configurations in the so-called Ramachandran plots.
+Directional data also exists outside of the 3D world. E.g., the words
+counts in a corpus of documents can be viewed as directional data once
+normalized to have unit 2 norm. Word-frequency vectors are often
+clustered using the cosine similarity, which measures the cosine of the
+angle formed by two vectors. This measure essentially treats the
+word-frequency vectors as directional data, and has been shown to be
+superior to Euclidean distance for document clustering. Another example
+of directional data is semantic word vectors, which associate a
+high-dimensional vector with each word in a given corpus. The semantic
+word vectors capture the semantic context of the associated words, and
+should not to be confused with the word-frequency vectors of documents.
+Again, cosine similarity is used as the distance measure to find words
+with similar meaning.</p>
+
+<p>One common task in many of these applications is to group the data into
+similar clusters. Due to the non- linearity of the hyper-sphere,
+clustering on the spherical manifold is often treated in an ad-hoc
+manner by either ignoring the geometry of the sphere or using
+overly-restricted models. In this work, we present a flexible Bayesian
+nonparametric (BNP) model for data residing on a hyper-sphere that
+respects the inherent geometry of the manifold. As shown above, our
+approach draws on the Dirichlet process Gaussian mixture model
+(DP-GMM), and models full covariance matrices on (linear) tangent
+spaces to the sphere. Importantly, the covariances of the Gaussians,
+capturing intra-cluster correlations, have analytical conjugate priors
+that enable efficient inference. Additionally, the approach
+transparently scales to high-dimensional data. We extend the efficient
+inference method of, a parallelized restricted Gibbs sampler with
+sub-cluster split/merge moves, to account for the geometry of the
+sphere. Moreover, we show how to combine sufficient statistics from
+tangent spaces around different points of tangency to propose merges
+efficiently.</p>
+
+<h2 id="comparison-of-different-clustering-algorithms-on-synthetic-isotropic-and-anisotropic-data">Comparison of different clustering algorithms on synthetic isotropic and anisotropic data</h2>
+
+<p><img src="http://people.csail.mit.edu/jstraub/images/pub/dptgmm/figureSynthetic.png" alt="Synthetic" title="algorithm comparison on synthetic data" /></p>
+
+<p>Mean and standard deviation over ten sampler runs of normalized mutual
+information (NMI) and cluster-count for synthetic datasets of 30
+isotropic (top) and anisotropic (bottom) clusters on the unit sphere in
+3D. The colors for the different algorithms are consistent across all
+plots. In the sphere-plots to the right it can be observed that, in
+contrast to the DP-TGMM, the DP Gaussian mixture model (DP-GMM) fails
+to separate (top) or incorrectly splits (bottom) clusters. This is a
+result of the DP-GMM clustering the data in the ambient Euclidean space
+and not on the spherical manifold. While the spherical k-means (spkm)
+and the k-means algorithm were both set to the true number of clusters,
+their clustering performance lacks behind the sampling based methods.
+The finite symmetric Dirichlet approximation to the DP-TGMM (referred
+to as FSD-TGMM) gives an incorrect and noisy estimate for the number of
+clusters and hence motivest the use of the proposed sub-cluster
+split/merge inference algorithm.</p>
+
+<h2 id="comparison-of-different-clustering-algorithms-and-models-on-real-world-surface-normal-data">Comparison of different clustering algorithms and models on real-world surface normal data</h2>
+
+<p><img src="http://people.csail.mit.edu/jstraub/images/pub/dptgmm/figureNYU_S.png" alt="Real" title="algorithm comparison on real data" /></p>
+
+<p>In the top row we show RGB images of the scene (only) for reference. We
+visualize the segmentation implied solely by the clustering of normals
+using the spherical k-means (spkm) algorithm with k = 7 (2nd row),
+using the DP-GMM (3rd row) and the proposed DP-TGMM (bottom row). Note
+how spkm and DP-GMM fail to properly segment the scenes. The colors
+encode the association to inferred clusters and black denotes missing
+depth data.</p>
+
+<h2 id="bibtex-a-idbibtexa">Bibtex <a id="bibtex"></a></h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>@inproceedings{straub2015dptgmm,
+  author = {Straub, Julian and Chang, Jason and Freifeld, Oren and Fisher III, John W.},
+  title = {A Dirichlet Process Mixture Model for Spherical Data},
+  year = {2015},
+  booktitle = {AISTATS},
+  url = { http://people.csail.mit.edu/jstraub/download/straub2015dptgmm.pdf}
+}
+</code></pre>
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://people.csail.mit.edu/jstraub/categories/#pub" class="page__taxonomy-item" rel="tag">pub</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2015-01-01T00:00:00-08:00">January 01, 2015</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=A Dirichlet Process Mixture Model for Spherical Data http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/A-Dirichlet-Process-Mixture-Model-for-Spherical-Data/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/A-Mixture-Of-Manhattan-Frames-Beyond-the-Manhattan-World/" class="pagination--pager" title="A Mixture of Manhattan Frames: Beyond the Manhattan World
+">Previous</a>
+    
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/Small-Variance-Nonparametric-Clustering-on-the-Hypersphere/" class="pagination--pager" title="Small-Variance Nonparametric Clustering on the Hypersphere
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDeepSDF.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" rel="permalink">DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer graphics, 3D computer vision and robotics communities have produced
+multiple approaches to representing 3D geometry for rendering and
+reconstruction...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" rel="permalink">PCT 2017 the year of ice and fire
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned/" rel="permalink">Gear and Backpacking Lessons Learned from Through-Hiking the Pacific Crest Trail
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Since I have been asked for multiple people, I am listing lessons I
+learned on the Pacific Crest Trail (PCT): things I
+changed, I would change, I would try, ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDirSLAM.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" rel="permalink">Direction-Aware Semi-Dense SLAM
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">To aide simultaneous localization and mapping (SLAM), future perception
+systems will incorporate forms of scene understanding.  In a step
+towards fully integ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/jstraub"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://people.csail.mit.edu/jstraub/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Julian Straub. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://people.csail.mit.edu/jstraub/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49442816-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>
