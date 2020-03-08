@@ -1,0 +1,475 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation - Julian Straub</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Julian Straub">
+<meta property="og:title" content="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation">
+
+
+  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">
+  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">
+
+
+
+  <meta property="og:description" content="Computer graphics, 3D computer vision and robotics communities have producedmultiple approaches to representing 3D geometry for rendering andreconstruction. These provide trade-offs across fidelity, efficiency andcompression capabilities. In this work, we introduce DeepSDF, a learnedcontinuous Signed Distance Function (SDF) representation of a class of shapesthat enables high quality shape representation, interpolation and completionfrom partial and noisy 3D input data. DeepSDF, like its classical counterpart,represents a shape’s surface by a continuous volumetric field: the magnitude ofa point in the field represents the distance to the surface boundary and thesign indicates whether the region is inside (-) or outside (+) of the shape,hence our representation implicitly encodes a shape’s boundary as thezero-level-set of the learned function while explicitly representing theclassification of space as being part of the shapes interior or not. Whileclassical SDF’s both in analytical or discretized voxel form typically representthe surface of a single shape, DeepSDF can represent an entire class of shapes.Furthermore, we show state-of-the-art performance for learned 3D shaperepresentation and completion while reducing the model size by an order ofmagnitude compared with previous work.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDeepSDF.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2019-03-01T00:00:00-08:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Julian Straub",
+      "url" : "http://people.csail.mit.edu/jstraub",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://people.csail.mit.edu/jstraub/feed.xml" type="application/atom+xml" rel="alternate" title="Julian Straub Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://people.csail.mit.edu/jstraub/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://people.csail.mit.edu/jstraub/">Julian Straub</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/pub/index.html">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/blog/index.html">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/photography/index.html">Photography</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/nyu-mmf-dataset/index.html">MMF Dataset</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation">
+    <meta itemprop="description" content="Computer graphics, 3D computer vision and robotics communities have producedmultiple approaches to representing 3D geometry for rendering andreconstruction. These provide trade-offs across fidelity, efficiency andcompression capabilities. In this work, we introduce DeepSDF, a learnedcontinuous Signed Distance Function (SDF) representation of a class of shapesthat enables high quality shape representation, interpolation and completionfrom partial and noisy 3D input data. DeepSDF, like its classical counterpart,represents a shape’s surface by a continuous volumetric field: the magnitude ofa point in the field represents the distance to the surface boundary and thesign indicates whether the region is inside (-) or outside (+) of the shape,hence our representation implicitly encodes a shape’s boundary as thezero-level-set of the learned function while explicitly representing theclassification of space as being part of the shapes interior or not. Whileclassical SDF’s both in analytical or discretized voxel form typically representthe surface of a single shape, DeepSDF can represent an entire class of shapes.Furthermore, we show state-of-the-art performance for learned 3D shaperepresentation and completion while reducing the model size by an order ofmagnitude compared with previous work.">
+    <meta itemprop="datePublished" content="March 01, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Computer graphics, 3D computer vision and robotics communities have produced
+multiple approaches to representing 3D geometry for rendering and
+reconstruction. These provide trade-offs across fidelity, efficiency and
+compression capabilities. In this work, we introduce DeepSDF, a learned
+continuous Signed Distance Function (SDF) representation of a class of shapes
+that enables high quality shape representation, interpolation and completion
+from partial and noisy 3D input data. DeepSDF, like its classical counterpart,
+represents a shape’s surface by a continuous volumetric field: the magnitude of
+a point in the field represents the distance to the surface boundary and the
+sign indicates whether the region is inside (-) or outside (+) of the shape,
+hence our representation implicitly encodes a shape’s boundary as the
+zero-level-set of the learned function while explicitly representing the
+classification of space as being part of the shapes interior or not. While
+classical SDF’s both in analytical or discretized voxel form typically represent
+the surface of a single shape, DeepSDF can represent an entire class of shapes.
+Furthermore, we show state-of-the-art performance for learned 3D shape
+representation and completion while reducing the model size by an order of
+magnitude compared with previous work.</p>
+
+<h2 id="bibtex-a-idbibtexa">Bibtex <a id="bibtex"></a></h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>@InProceedings{Park_2019_CVPR,
+  author = {Park, Jeong Joon and Florence, Peter and Straub, Julian and Newcombe, Richard and Lovegrove, Steven},
+  title = {DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2019}
+}
+</code></pre>
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://people.csail.mit.edu/jstraub/categories/#pub" class="page__taxonomy-item" rel="tag">pub</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-03-01T00:00:00-08:00">March 01, 2019</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" class="pagination--pager" title="Reconstructing Scenes with Mirror and Glass Surfaces
+">Previous</a>
+    
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/" class="pagination--pager" title="StereoDRNet: Dilated Residual Stereo Net
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://people.csail.mit.edu/jstraub/images/stereodrnet.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/" rel="permalink">StereoDRNet: Dilated Residual Stereo Net
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth ma...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "http://people.csail.mit.edu/jstraub/images/mirrorAndGlass.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" rel="permalink">Reconstructing Scenes with Mirror and Glass Surfaces
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" rel="permalink">PCT 2017 the year of ice and fire
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned/" rel="permalink">Gear and Backpacking Lessons Learned from Through-Hiking the Pacific Crest Trail
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  6 minute read
+	
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Since I have been asked for multiple people, I am listing lessons I
+learned on the Pacific Crest Trail (PCT): things I
+changed, I would change, I would try, ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/jstraub"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://people.csail.mit.edu/jstraub/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Julian Straub. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://people.csail.mit.edu/jstraub/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49442816-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>

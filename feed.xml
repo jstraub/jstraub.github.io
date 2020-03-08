@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="http://people.csail.mit.edu/jstraub/feed.xml" rel="self" type="application/atom+xml" /><link href="http://people.csail.mit.edu/jstraub/" rel="alternate" type="text/html" /><updated>2020-01-05T12:13:14-08:00</updated><id>http://people.csail.mit.edu/jstraub/</id><title>Julian Straub</title><subtitle>developing artificial 3D perception</subtitle><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><entry><title>StereoDRNet: Dilated Residual Stereo Net</title><link href="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/" rel="alternate" type="text/html" title="StereoDRNet: Dilated Residual Stereo Net" /><published>2019-06-15T00:00:00-07:00</published><updated>2019-06-15T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/StereoDRNet-Dilated-Residual-Stereo-Network/">&lt;p&gt;We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene. Our proposed depth refinement architecture, predicts view-consistent disparity and occlusion maps that helps the fusion system to produce geometrically consistent reconstructions. We utilize 3D dilated convolutions in our proposed cost filtering network that yields better filtering while almost halving the computational cost in comparison to state of the art cost filtering architectures. For feature extraction we use the Vortex Pooling architecture. The proposed method achieves state of the art results in KITTI 2012, KITTI 2015 and ETH 3D stereo benchmarks.  Finally, we demonstrate that our system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{
+  title={StereoDRNet: Dilated Residual Stereo Net},
+  author={Chabra, Rohan and Straub, Julian and Sweeny, Chris and Newcombe, Richard and Fuchs, Henry},
+  booktitle ={CVPR},
+  year={2019}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene. Our proposed depth refinement architecture, predicts view-consistent disparity and occlusion maps that helps the fusion system to produce geometrically consistent reconstructions. We utilize 3D dilated convolutions in our proposed cost filtering network that yields better filtering while almost halving the computational cost in comparison to state of the art cost filtering architectures. For feature extraction we use the Vortex Pooling architecture. The proposed method achieves state of the art results in KITTI 2012, KITTI 2015 and ETH 3D stereo benchmarks.  Finally, we demonstrate that our system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.</summary></entry><entry><title>DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation</title><link href="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/" rel="alternate" type="text/html" title="DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation" /><published>2019-03-01T00:00:00-08:00</published><updated>2019-03-01T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/DeepSDF-Learning-Continuous-Signed-Distance-Functions-For-Shape-Representation/">&lt;p&gt;Computer graphics, 3D computer vision and robotics communities have produced
+multiple approaches to representing 3D geometry for rendering and
+reconstruction. These provide trade-offs across fidelity, efficiency and
+compression capabilities. In this work, we introduce DeepSDF, a learned
+continuous Signed Distance Function (SDF) representation of a class of shapes
+that enables high quality shape representation, interpolation and completion
+from partial and noisy 3D input data. DeepSDF, like its classical counterpart,
+represents a shape’s surface by a continuous volumetric field: the magnitude of
+a point in the field represents the distance to the surface boundary and the
+sign indicates whether the region is inside (-) or outside (+) of the shape,
+hence our representation implicitly encodes a shape’s boundary as the
+zero-level-set of the learned function while explicitly representing the
+classification of space as being part of the shapes interior or not. While
+classical SDF’s both in analytical or discretized voxel form typically represent
+the surface of a single shape, DeepSDF can represent an entire class of shapes.
+Furthermore, we show state-of-the-art performance for learned 3D shape
+representation and completion while reducing the model size by an order of
+magnitude compared with previous work.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@InProceedings{Park_2019_CVPR,
+  author = {Park, Jeong Joon and Florence, Peter and Straub, Julian and Newcombe, Richard and Lovegrove, Steven},
+  title = {DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2019}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Computer graphics, 3D computer vision and robotics communities have produced
+multiple approaches to representing 3D geometry for rendering and
+reconstruction. These provide trade-offs across fidelity, efficiency and
+compression capabilities. In this work, we introduce DeepSDF, a learned
+continuous Signed Distance Function (SDF) representation of a class of shapes
+that enables high quality shape representation, interpolation and completion
+from partial and noisy 3D input data. DeepSDF, like its classical counterpart,
+represents a shape’s surface by a continuous volumetric field: the magnitude of
+a point in the field represents the distance to the surface boundary and the
+sign indicates whether the region is inside (-) or outside (+) of the shape,
+hence our representation implicitly encodes a shape’s boundary as the
+zero-level-set of the learned function while explicitly representing the
+classification of space as being part of the shapes interior or not. While
+classical SDF’s both in analytical or discretized voxel form typically represent
+the surface of a single shape, DeepSDF can represent an entire class of shapes.
+Furthermore, we show state-of-the-art performance for learned 3D shape
+representation and completion while reducing the model size by an order of
+magnitude compared with previous work.</summary></entry><entry><title>Reconstructing Scenes with Mirror and Glass Surfaces</title><link href="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/" rel="alternate" type="text/html" title="Reconstructing Scenes with Mirror and Glass Surfaces" /><published>2018-08-01T00:00:00-07:00</published><updated>2018-08-01T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Reconstructing-Scenes-with-Mirror-and-Glass-Surfaces/">&lt;p&gt;Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{whelan2018reconstructing,
+  title={Reconstructing scenes with mirror and glass surfaces},
+  author={Whelan, Thomas and Goesele, Michael and Lovegrove, Steven J and Straub, Julian and Green, Simon and Szeliski, Richard and Butterfield, Steven and Verma, Shobhit and Newcombe, Richard},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={37},
+  number={4},
+  pages={102},
+  year={2018},
+  publisher={ACM}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Planar reflective surfaces such as glass and mirrors are notoriously hard to reconstruct for most current 3D scanning techniques. When treated naïvely, they introduce duplicate scene structures, effectively destroying the reconstruction altogether. Our key insight is that an easy to identify structure attached to the scanner - in our case an AprilTag - can yield reliable information about the existence and the geometry of glass and mirror surfaces in a scene. We introduce a fully automatic pipeline that allows us to reconstruct the geometry and extent of planar glass and mirror surfaces while being able to distinguish between the two. Furthermore, our system can automatically segment observations of multiple reflective surfaces in a scene based on their estimated planes and locations. In the proposed setup, minimal additional hardware is needed to create high-quality results. We demonstrate this using reconstructions of several scenes with a variety of real mirrors and glass.</summary></entry><entry><title>PCT 2017 the year of ice and fire</title><link href="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/" rel="alternate" type="text/html" title="PCT 2017 the year of ice and fire" /><published>2018-03-31T00:00:00-07:00</published><updated>2018-03-31T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/PCT-2017-the-year-of-ice-and-fire/">&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170515-081518.jpg&quot; alt=&quot;2017/05/15 08:15:18&quot; /&gt; 
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170515-092025.jpg&quot; alt=&quot;2017/05/15 09:20:25&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170516-090358.jpg&quot; alt=&quot;2017/05/16 09:03:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170516-120928.jpg&quot; alt=&quot;2017/05/16 12:09:28&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170517-152754.jpg&quot; alt=&quot;2017/05/17 15:27:54&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170518-081553.jpg&quot; alt=&quot;2017/05/18 08:15:53&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170518-100025.jpg&quot; alt=&quot;2017/05/18 10:00:25&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170518-121521.jpg&quot; alt=&quot;2017/05/18 12:15:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170518-174117.jpg&quot; alt=&quot;2017/05/18 17:41:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170519-060906.jpg&quot; alt=&quot;2017/05/19 06:09:06&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170519-091738.jpg&quot; alt=&quot;2017/05/19 09:17:38&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170520-082738.jpg&quot; alt=&quot;2017/05/20 08:27:38&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170520-122819.jpg&quot; alt=&quot;2017/05/20 12:28:19&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170520-194535.jpg&quot; alt=&quot;2017/05/20 19:45:35&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170521-081417.jpg&quot; alt=&quot;2017/05/21 08:14:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170521-090257.jpg&quot; alt=&quot;2017/05/21 09:02:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170522-160417.jpg&quot; alt=&quot;2017/05/22 16:04:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170523-124932.jpg&quot; alt=&quot;2017/05/23 12:49:32&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170524-181116.jpg&quot; alt=&quot;2017/05/24 18:11:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170524-201621.jpg&quot; alt=&quot;2017/05/24 20:16:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170525-063724.jpg&quot; alt=&quot;2017/05/25 06:37:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170525-101114.jpg&quot; alt=&quot;2017/05/25 10:11:14&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170525-143325.jpg&quot; alt=&quot;2017/05/25 14:33:25&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170526-093435.jpg&quot; alt=&quot;2017/05/26 09:34:35&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170526-133100.jpg&quot; alt=&quot;2017/05/26 13:31:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170527-074725.jpg&quot; alt=&quot;2017/05/27 07:47:25&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170528-193857.jpg&quot; alt=&quot;2017/05/28 19:38:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170529-145650.jpg&quot; alt=&quot;2017/05/29 14:56:50&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170530-142446.jpg&quot; alt=&quot;2017/05/30 14:24:46&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170530-144240.jpg&quot; alt=&quot;2017/05/30 14:42:40&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170531-053534.jpg&quot; alt=&quot;2017/05/31 05:35:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170531-131225.jpg&quot; alt=&quot;2017/05/31 13:12:25&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170531-131702.jpg&quot; alt=&quot;2017/05/31 13:17:02&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170531-164100.jpg&quot; alt=&quot;2017/05/31 16:41:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170531-165316.jpg&quot; alt=&quot;2017/05/31 16:53:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170601-054121.jpg&quot; alt=&quot;2017/06/01 05:41:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170601-085020.jpg&quot; alt=&quot;2017/06/01 08:50:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170602-152921.jpg&quot; alt=&quot;2017/06/02 15:29:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170602-160221.jpg&quot; alt=&quot;2017/06/02 16:02:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170603-090526.jpg&quot; alt=&quot;2017/06/03 09:05:26&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170604-053719.jpg&quot; alt=&quot;2017/06/04 05:37:19&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170604-131204.jpg&quot; alt=&quot;2017/06/04 13:12:04&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170604-181159.jpg&quot; alt=&quot;2017/06/04 18:11:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170605-091020.jpg&quot; alt=&quot;2017/06/05 09:10:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170605-111120.jpg&quot; alt=&quot;2017/06/05 11:11:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170606-064152.jpg&quot; alt=&quot;2017/06/06 06:41:52&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170606-152546.jpg&quot; alt=&quot;2017/06/06 15:25:46&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170611-093911.jpg&quot; alt=&quot;2017/06/11 09:39:11&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170612-060634.jpg&quot; alt=&quot;2017/06/12 06:06:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170612-084333.jpg&quot; alt=&quot;2017/06/12 08:43:33&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170612-181356.jpg&quot; alt=&quot;2017/06/12 18:13:56&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170613-112921.jpg&quot; alt=&quot;2017/06/13 11:29:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170613-141339.jpg&quot; alt=&quot;2017/06/13 14:13:39&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170614-050720.jpg&quot; alt=&quot;2017/06/14 05:07:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170614-054219.jpg&quot; alt=&quot;2017/06/14 05:42:19&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170614-082134.jpg&quot; alt=&quot;2017/06/14 08:21:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170614-141448.jpg&quot; alt=&quot;2017/06/14 14:14:48&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170614-192626.jpg&quot; alt=&quot;2017/06/14 19:26:26&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170615-083331.jpg&quot; alt=&quot;2017/06/15 08:33:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170617-080315.jpg&quot; alt=&quot;2017/06/17 08:03:15&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170617-193541.jpg&quot; alt=&quot;2017/06/17 19:35:41&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170617-204138.jpg&quot; alt=&quot;2017/06/17 20:41:38&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170618-170829.jpg&quot; alt=&quot;2017/06/18 17:08:29&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170619-105719.jpg&quot; alt=&quot;2017/06/19 10:57:19&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170619-192150.jpg&quot; alt=&quot;2017/06/19 19:21:50&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170620-063156.jpg&quot; alt=&quot;2017/06/20 06:31:56&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170621-104930.jpg&quot; alt=&quot;2017/06/21 10:49:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170622-105608.jpg&quot; alt=&quot;2017/06/22 10:56:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170623-150927.jpg&quot; alt=&quot;2017/06/23 15:09:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170623-152513.jpg&quot; alt=&quot;2017/06/23 15:25:13&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170624-065758.jpg&quot; alt=&quot;2017/06/24 06:57:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170624-113243.jpg&quot; alt=&quot;2017/06/24 11:32:43&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170624-135216.jpg&quot; alt=&quot;2017/06/24 13:52:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170625-105208.jpg&quot; alt=&quot;2017/06/25 10:52:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170625-114117.jpg&quot; alt=&quot;2017/06/25 11:41:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170625-181733.jpg&quot; alt=&quot;2017/06/25 18:17:33&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170625-200607.jpg&quot; alt=&quot;2017/06/25 20:06:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170625-200624.jpg&quot; alt=&quot;2017/06/25 20:06:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-050457.jpg&quot; alt=&quot;2017/06/26 05:04:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-054400.jpg&quot; alt=&quot;2017/06/26 05:44:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-055336.jpg&quot; alt=&quot;2017/06/26 05:53:36&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-083040.jpg&quot; alt=&quot;2017/06/26 08:30:40&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-102605.jpg&quot; alt=&quot;2017/06/26 10:26:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-114755.jpg&quot; alt=&quot;2017/06/26 11:47:55&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-130501.jpg&quot; alt=&quot;2017/06/26 13:05:01&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-163755.jpg&quot; alt=&quot;2017/06/26 16:37:55&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-191428.jpg&quot; alt=&quot;2017/06/26 19:14:28&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170626-200549.jpg&quot; alt=&quot;2017/06/26 20:05:49&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-094718.jpg&quot; alt=&quot;2017/06/27 09:47:18&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-110129.jpg&quot; alt=&quot;2017/06/27 11:01:29&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-120105.jpg&quot; alt=&quot;2017/06/27 12:01:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-122259.jpg&quot; alt=&quot;2017/06/27 12:22:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-150030.jpg&quot; alt=&quot;2017/06/27 15:00:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170627-180607.jpg&quot; alt=&quot;2017/06/27 18:06:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-064109.jpg&quot; alt=&quot;2017/06/28 06:41:09&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-065323.jpg&quot; alt=&quot;2017/06/28 06:53:23&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-083223.jpg&quot; alt=&quot;2017/06/28 08:32:23&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-084224.jpg&quot; alt=&quot;2017/06/28 08:42:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-115603.jpg&quot; alt=&quot;2017/06/28 11:56:03&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-122432.jpg&quot; alt=&quot;2017/06/28 12:24:32&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-165130.jpg&quot; alt=&quot;2017/06/28 16:51:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-174537.jpg&quot; alt=&quot;2017/06/28 17:45:37&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-194832.jpg&quot; alt=&quot;2017/06/28 19:48:32&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170628-195312.jpg&quot; alt=&quot;2017/06/28 19:53:12&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-073949.jpg&quot; alt=&quot;2017/06/29 07:39:49&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-090024.jpg&quot; alt=&quot;2017/06/29 09:00:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-102542.jpg&quot; alt=&quot;2017/06/29 10:25:42&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-115830.jpg&quot; alt=&quot;2017/06/29 11:58:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-122008.jpg&quot; alt=&quot;2017/06/29 12:20:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-145342.jpg&quot; alt=&quot;2017/06/29 14:53:42&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-145544.jpg&quot; alt=&quot;2017/06/29 14:55:44&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-152408.jpg&quot; alt=&quot;2017/06/29 15:24:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170629-183916.jpg&quot; alt=&quot;2017/06/29 18:39:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170630-082153.jpg&quot; alt=&quot;2017/06/30 08:21:53&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170630-114741.jpg&quot; alt=&quot;2017/06/30 11:47:41&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170701-124107.jpg&quot; alt=&quot;2017/07/01 12:41:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170702-172249.jpg&quot; alt=&quot;2017/07/02 17:22:49&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170703-072417.jpg&quot; alt=&quot;2017/07/03 07:24:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170703-091424.jpg&quot; alt=&quot;2017/07/03 09:14:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170703-132435.jpg&quot; alt=&quot;2017/07/03 13:24:35&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170703-132712.jpg&quot; alt=&quot;2017/07/03 13:27:12&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170703-164531.jpg&quot; alt=&quot;2017/07/03 16:45:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170704-111240.jpg&quot; alt=&quot;2017/07/04 11:12:40&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170704-122530.jpg&quot; alt=&quot;2017/07/04 12:25:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170704-133428.jpg&quot; alt=&quot;2017/07/04 13:34:28&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170704-150830.jpg&quot; alt=&quot;2017/07/04 15:08:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170705-073020.jpg&quot; alt=&quot;2017/07/05 07:30:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170706-084404.jpg&quot; alt=&quot;2017/07/06 08:44:04&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170706-092356.jpg&quot; alt=&quot;2017/07/06 09:23:56&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170706-122444.jpg&quot; alt=&quot;2017/07/06 12:24:44&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170706-131058.jpg&quot; alt=&quot;2017/07/06 13:10:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170706-152204.jpg&quot; alt=&quot;2017/07/06 15:22:04&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170708-081505.jpg&quot; alt=&quot;2017/07/08 08:15:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170708-122757.jpg&quot; alt=&quot;2017/07/08 12:27:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170708-140722.jpg&quot; alt=&quot;2017/07/08 14:07:22&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170708-193207.jpg&quot; alt=&quot;2017/07/08 19:32:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170709-090039.jpg&quot; alt=&quot;2017/07/09 09:00:39&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170709-123827.jpg&quot; alt=&quot;2017/07/09 12:38:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170709-133955.jpg&quot; alt=&quot;2017/07/09 13:39:55&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170709-141847.jpg&quot; alt=&quot;2017/07/09 14:18:47&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170710-085121.jpg&quot; alt=&quot;2017/07/10 08:51:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170710-102602.jpg&quot; alt=&quot;2017/07/10 10:26:02&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170710-140052.jpg&quot; alt=&quot;2017/07/10 14:00:52&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170710-141431.jpg&quot; alt=&quot;2017/07/10 14:14:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170711-095215.jpg&quot; alt=&quot;2017/07/11 09:52:15&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170711-103313.jpg&quot; alt=&quot;2017/07/11 10:33:13&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170711-174503.jpg&quot; alt=&quot;2017/07/11 17:45:03&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170711-175134.jpg&quot; alt=&quot;2017/07/11 17:51:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-074105.jpg&quot; alt=&quot;2017/07/12 07:41:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-114408.jpg&quot; alt=&quot;2017/07/12 11:44:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-163122.jpg&quot; alt=&quot;2017/07/12 16:31:22&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-171546.jpg&quot; alt=&quot;2017/07/12 17:15:46&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-174902.jpg&quot; alt=&quot;2017/07/12 17:49:02&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-202000.jpg&quot; alt=&quot;2017/07/12 20:20:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170712-202026.jpg&quot; alt=&quot;2017/07/12 20:20:26&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170713-083102.jpg&quot; alt=&quot;2017/07/13 08:31:02&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170713-181801.jpg&quot; alt=&quot;2017/07/13 18:18:01&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170714-075738.jpg&quot; alt=&quot;2017/07/14 07:57:38&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170715-113106.jpg&quot; alt=&quot;2017/07/15 11:31:06&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170715-152517.jpg&quot; alt=&quot;2017/07/15 15:25:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170715-153831.jpg&quot; alt=&quot;2017/07/15 15:38:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170715-202934.jpg&quot; alt=&quot;2017/07/15 20:29:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170716-083358.jpg&quot; alt=&quot;2017/07/16 08:33:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170717-135508.jpg&quot; alt=&quot;2017/07/17 13:55:08&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170718-124355.jpg&quot; alt=&quot;2017/07/18 12:43:55&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170718-155358.jpg&quot; alt=&quot;2017/07/18 15:53:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170718-182452.jpg&quot; alt=&quot;2017/07/18 18:24:52&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170719-132305.jpg&quot; alt=&quot;2017/07/19 13:23:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170719-154814.jpg&quot; alt=&quot;2017/07/19 15:48:14&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/&quot; alt=&quot;    /  /     :  :  &quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170720-202316.jpg&quot; alt=&quot;2017/07/20 20:23:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170721-090927.jpg&quot; alt=&quot;2017/07/21 09:09:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170723-202116.jpg&quot; alt=&quot;2017/07/23 20:21:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170724-052416.jpg&quot; alt=&quot;2017/07/24 05:24:16&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170724-055227.jpg&quot; alt=&quot;2017/07/24 05:52:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170724-102606.jpg&quot; alt=&quot;2017/07/24 10:26:06&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170724-131250.jpg&quot; alt=&quot;2017/07/24 13:12:50&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170725-143832.jpg&quot; alt=&quot;2017/07/25 14:38:32&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170726-150712.jpg&quot; alt=&quot;2017/07/26 15:07:12&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170727-072522.jpg&quot; alt=&quot;2017/07/27 07:25:22&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170727-124404.jpg&quot; alt=&quot;2017/07/27 12:44:04&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170728-091159.jpg&quot; alt=&quot;2017/07/28 09:11:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170728-100909.jpg&quot; alt=&quot;2017/07/28 10:09:09&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170728-120153.jpg&quot; alt=&quot;2017/07/28 12:01:53&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170728-194035.jpg&quot; alt=&quot;2017/07/28 19:40:35&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170729-174509.jpg&quot; alt=&quot;2017/07/29 17:45:09&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170730-182853.jpg&quot; alt=&quot;2017/07/30 18:28:53&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170731-193444.jpg&quot; alt=&quot;2017/07/31 19:34:44&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170801-205120.jpg&quot; alt=&quot;2017/08/01 20:51:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170802-113914.jpg&quot; alt=&quot;2017/08/02 11:39:14&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170802-163647.jpg&quot; alt=&quot;2017/08/02 16:36:47&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170803-061733.jpg&quot; alt=&quot;2017/08/03 06:17:33&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170804-064105.jpg&quot; alt=&quot;2017/08/04 06:41:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170804-105120.jpg&quot; alt=&quot;2017/08/04 10:51:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170804-203421.jpg&quot; alt=&quot;2017/08/04 20:34:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170805-163424.jpg&quot; alt=&quot;2017/08/05 16:34:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170806-062212.jpg&quot; alt=&quot;2017/08/06 06:22:12&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170806-064719.jpg&quot; alt=&quot;2017/08/06 06:47:19&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170806-155127.jpg&quot; alt=&quot;2017/08/06 15:51:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170807-113234.jpg&quot; alt=&quot;2017/08/07 11:32:34&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170808-062153.jpg&quot; alt=&quot;2017/08/08 06:21:53&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170808-083157.jpg&quot; alt=&quot;2017/08/08 08:31:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170809-070748.jpg&quot; alt=&quot;2017/08/09 07:07:48&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170809-180856.jpg&quot; alt=&quot;2017/08/09 18:08:56&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170810-130404.jpg&quot; alt=&quot;2017/08/10 13:04:04&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170810-160636.jpg&quot; alt=&quot;2017/08/10 16:06:36&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170811-145924.jpg&quot; alt=&quot;2017/08/11 14:59:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170812-071531.jpg&quot; alt=&quot;2017/08/12 07:15:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170812-172056.jpg&quot; alt=&quot;2017/08/12 17:20:56&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170812-201326.jpg&quot; alt=&quot;2017/08/12 20:13:26&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170813-070848.jpg&quot; alt=&quot;2017/08/13 07:08:48&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170813-071614.jpg&quot; alt=&quot;2017/08/13 07:16:14&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170813-090139.jpg&quot; alt=&quot;2017/08/13 09:01:39&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170813-120930.jpg&quot; alt=&quot;2017/08/13 12:09:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170814-093300.jpg&quot; alt=&quot;2017/08/14 09:33:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170815-131912.jpg&quot; alt=&quot;2017/08/15 13:19:12&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170816-060102.jpg&quot; alt=&quot;2017/08/16 06:01:02&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170816-110951.jpg&quot; alt=&quot;2017/08/16 11:09:51&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170816-133507.jpg&quot; alt=&quot;2017/08/16 13:35:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170816-175327.jpg&quot; alt=&quot;2017/08/16 17:53:27&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170817-061522.jpg&quot; alt=&quot;2017/08/17 06:15:22&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170818-140333.jpg&quot; alt=&quot;2017/08/18 14:03:33&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170819-172459.jpg&quot; alt=&quot;2017/08/19 17:24:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170820-064505.jpg&quot; alt=&quot;2017/08/20 06:45:05&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170820-132758.jpg&quot; alt=&quot;2017/08/20 13:27:58&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170821-101831.jpg&quot; alt=&quot;2017/08/21 10:18:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170822-084207.jpg&quot; alt=&quot;2017/08/22 08:42:07&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170822-165723.jpg&quot; alt=&quot;2017/08/22 16:57:23&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170823-104059.jpg&quot; alt=&quot;2017/08/23 10:40:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170824-195220.jpg&quot; alt=&quot;2017/08/24 19:52:20&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170825-173209.jpg&quot; alt=&quot;2017/08/25 17:32:09&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170825-193943.jpg&quot; alt=&quot;2017/08/25 19:39:43&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170825-195836.jpg&quot; alt=&quot;2017/08/25 19:58:36&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170826-081349.jpg&quot; alt=&quot;2017/08/26 08:13:49&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170826-083352.jpg&quot; alt=&quot;2017/08/26 08:33:52&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170827-095057.jpg&quot; alt=&quot;2017/08/27 09:50:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170828-121609.jpg&quot; alt=&quot;2017/08/28 12:16:09&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170828-173146.jpg&quot; alt=&quot;2017/08/28 17:31:46&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170829-073457.jpg&quot; alt=&quot;2017/08/29 07:34:57&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170831-075651.jpg&quot; alt=&quot;2017/08/31 07:56:51&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170831-092237.jpg&quot; alt=&quot;2017/08/31 09:22:37&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170831-115239.jpg&quot; alt=&quot;2017/08/31 11:52:39&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170901-144918.jpg&quot; alt=&quot;2017/09/01 14:49:18&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170902-123221.jpg&quot; alt=&quot;2017/09/02 12:32:21&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170902-175049.jpg&quot; alt=&quot;2017/09/02 17:50:49&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170902-191300.jpg&quot; alt=&quot;2017/09/02 19:13:00&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170903-094259.jpg&quot; alt=&quot;2017/09/03 09:42:59&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170903-145733.jpg&quot; alt=&quot;2017/09/03 14:57:33&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170903-162423.jpg&quot; alt=&quot;2017/09/03 16:24:23&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170903-193431.jpg&quot; alt=&quot;2017/09/03 19:34:31&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170903-194755.jpg&quot; alt=&quot;2017/09/03 19:47:55&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170904-084101.jpg&quot; alt=&quot;2017/09/04 08:41:01&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170904-171330.jpg&quot; alt=&quot;2017/09/04 17:13:30&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170904-181639.jpg&quot; alt=&quot;2017/09/04 18:16:39&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170905-081617.jpg&quot; alt=&quot;2017/09/05 08:16:17&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170906-071432.jpg&quot; alt=&quot;2017/09/06 07:14:32&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170908-081613.jpg&quot; alt=&quot;2017/09/08 08:16:13&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170908-084348.jpg&quot; alt=&quot;2017/09/08 08:43:48&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170908-101324.jpg&quot; alt=&quot;2017/09/08 10:13:24&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170908-143546.jpg&quot; alt=&quot;2017/09/08 14:35:46&quot; /&gt;
+&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/pct2017_1pd_uniformNamed/20170908-143651.jpg&quot; alt=&quot;2017/09/08 14:36:51&quot; /&gt;&lt;/p&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary></summary></entry><entry><title>Gear and Backpacking Lessons Learned from Through-Hiking the Pacific Crest Trail</title><link href="http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned/" rel="alternate" type="text/html" title="Gear and Backpacking Lessons Learned from Through-Hiking the Pacific Crest Trail" /><published>2017-11-11T00:00:00-08:00</published><updated>2017-11-11T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned/">&lt;p&gt;Since I have been asked for multiple people, I am listing lessons I
+learned on the Pacific Crest Trail (PCT): things I
+changed, I would change, I would try, and things I would keep the same
+in terms of gear and backpacking techniques.&lt;/p&gt;
+
+&lt;h3 id=&quot;changes-i-made-to-my-approach-to-hiking-and-my-gear-during-the-pct&quot;&gt;Changes I made to my approach to hiking and my gear during the PCT:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changed long pants for &lt;em&gt;short running shorts and Patagonia Houdini wind pants&lt;/em&gt;
+(warm enough and super light).&lt;/li&gt;
+  &lt;li&gt;Switched from cooking with a stove to &lt;em&gt;stove-less&lt;/em&gt;: I realized that I was a huge hassle
+to warm up food just to leave it to cool down enough to eat - with
+cold soaking I get to camp and can start eating right away.
+Additionally, I did not have to worry about finding fuel in town.&lt;/li&gt;
+  &lt;li&gt;Changed my aluminum hiking poles to &lt;em&gt;carbon fiber hiking poles&lt;/em&gt; (Black
+Diamond Carbon Z) after bending my aluminum poles in a river
+crossing. I found the carbon fiber poles to be significantly lighter
+and stable enough.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;shipped my fleece home&lt;/em&gt; (puffy or fleece either is enough but both are
+over kill except for high sierras in snow; I would do it the other
+way around next time (see below)).&lt;/li&gt;
+  &lt;li&gt;dropped all but &lt;em&gt;one stuff/compression sack&lt;/em&gt; (had one waterproof 11l
+one for emergencies to keep my sleeping bag dry (but never needed it)
+and used my bug net to keep all the smaller stuff together).&lt;/li&gt;
+  &lt;li&gt;started using a &lt;em&gt;kevlar food bag&lt;/em&gt; (Ursack) after I had mice in my tent twice
+(but I would try to get away with smell proof bags next time because
+the Kevlar is heavy).&lt;/li&gt;
+  &lt;li&gt;switched to /settled on &lt;em&gt;darn tough socks&lt;/em&gt; (really tough!).&lt;/li&gt;
+  &lt;li&gt;started using a &lt;em&gt;buff&lt;/em&gt; to keep my neck and throat warm starting in Oregon.&lt;/li&gt;
+  &lt;li&gt;once it got colder in the north I started using a &lt;em&gt;synthetic T-shirt
+base layer&lt;/em&gt; in addition to my sun shirt.&lt;/li&gt;
+  &lt;li&gt;started using a &lt;em&gt;mylar ground sheet&lt;/em&gt; after my mattress got punctured
+(mylar = rescue blanked which can be bought in a lot of towns to
+replace a broken one).&lt;/li&gt;
+  &lt;li&gt;used &lt;em&gt;calf compressions&lt;/em&gt; to prevent shin splints (never got them) and
+Achilles tendon inflammation (stopped when I got the compressions).&lt;/li&gt;
+  &lt;li&gt;took &lt;em&gt;turmeric+pepper capsules&lt;/em&gt; every day to keep inflammation down
+(probably helped stop Achilles tendon inflammation).&lt;/li&gt;
+  &lt;li&gt;sent back my silk sleeping-bag liner and used &lt;em&gt;only long Johns and long
+merino wool shirt during the night&lt;/em&gt;. They added enough warmth and also
+protected my quilt from the worst dirt and sweat.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/blog/pctGear/coldSoakDinner.jpg&quot; alt=&quot;cold soaking food&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;things-i-would-do-differently-next-time&quot;&gt;Things I would do differently next time:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;get &lt;em&gt;transition prescription glasses&lt;/em&gt; so I do not have to switch between glasses.&lt;/li&gt;
+  &lt;li&gt;use a &lt;em&gt;bivy + tarp combo&lt;/em&gt; instead of my tent (lighter and faster than
+tent because tarp would not have been necessary for most of the
+trail).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;just bring a fleece hoodie&lt;/em&gt; (I used the Patagonia R1 but a lot of
+ultra light hikers I saw were using the &lt;a href=&quot;http://melanzana.com/catalog/product_info.php/cPath/22/products_id/34?osCsid=b9d8ca4dbe3c2bdda9a168afbfa2d4b7&quot;&gt;hoodie from
+Melanzana&lt;/a&gt;) as
+opposed to puffy (wet fleece still keeps warm and does not overheat
+as quickly if used in the morning for hiking).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;leave Garmin inReach&lt;/em&gt; at home (I felt save all the time and would
+not have needed it - I mostly brought it for my family and friends
+but it did add a lot of extra weight and hassle keeping it charged
+and logging positions)&lt;/li&gt;
+  &lt;li&gt;bring &lt;em&gt;lightweight camp shoes&lt;/em&gt; (the Huaraches made from old insoles and
+shoe laces - see below) for wet and cold sections (this year the High
+Sierra) so that my feet can be dry while making dinner.&lt;/li&gt;
+  &lt;li&gt;I would &lt;em&gt;start out stove-less&lt;/em&gt; right away in the desert and only bring
+a stove in for the High Sierra if it is snowed in and cold and wet
+again. Otherwise I would go stove-less all the way.&lt;/li&gt;
+  &lt;li&gt;bring &lt;em&gt;sun-gloves&lt;/em&gt; for the desert to avoid having super sticky hands
+from the sunscreen.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/blog/pctGear/drinking.jpg&quot; alt=&quot;Sawyer Squeeze in action&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;things-i-would-try&quot;&gt;Things I would try:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I would try a &lt;em&gt;different lightweight backpack&lt;/em&gt; (I used the ZPacks Arc
+Blast) that is made from more
+durable fabric (while Dyneema is super strong it is pretty bad when
+it comes to abrasion such as when you put your pack down somewhere).
+A lot of hikers this year were happy with &lt;a href=&quot;https://www.swdbackpacks.com/backpacks&quot;&gt;Superior Wilderness
+Design&lt;/a&gt; backpacks.&lt;/li&gt;
+  &lt;li&gt;I would try to &lt;em&gt;snack less and condense my eating&lt;/em&gt; to a few meals in
+order to reduce the impact of all the sweet food on my teeth.&lt;/li&gt;
+  &lt;li&gt;I really enjoyed my La Sportiva Wildcat trail runners (I never got
+blisters) but I would try to find &lt;em&gt;more lightweight shoes&lt;/em&gt; with an even
+wider toe box.&lt;/li&gt;
+  &lt;li&gt;I would try to use the &lt;em&gt;Patagonia Sunshade&lt;/em&gt; fishing sun-shirt with hoodie instead
+of the sun shirt and the neck protection on the sun hat. The effect
+would be the same but I really liked the way the hoodie looked,
+that it protected the side of the face even better, and that it was
+one piece in the neck region - no need to worry about the proper
+alignment of the neck protection and the top of the shirt.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/blog/pctGear/umbrella.jpg&quot; alt=&quot;Umbrella&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;things-i-would-keep-the-same-next-time&quot;&gt;Things I would keep the same next time:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use &lt;em&gt;umbrella&lt;/em&gt; for desert hiking: with &lt;a href=&quot;https://www.amazon.com/gp/product/B001OPO7L8/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;my
+umbrella&lt;/a&gt; up I could keep
+going through the worst mid-day heat in the desert where others were
+just lying around in the (rare) shade.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;20F Enlightened Equipment quilt&lt;/em&gt;: I only felt cold three nights in the
+icy and high altitudes of the high sierra. But I suspect that this
+was mostly because I did not get my feet out of my cold wet shoes
+quickly enough (I did not have the &lt;a href=&quot;https://steemit.com/running/@qezzit/making-your-own-running-huaraches-part-2&quot;&gt;Huaraches made from insoles and
+shoe
+laces&lt;/a&gt;
+that Nobody thought me to make)&lt;/li&gt;
+  &lt;li&gt;bring a &lt;em&gt;sun-hat&lt;/em&gt; with protection for the neck and the side of my face.
+Pretty much eliminates the need for sunscreen in the face.&lt;/li&gt;
+  &lt;li&gt;bring a &lt;em&gt;SPF-50 sun shirt&lt;/em&gt;. The sun-shirt was great for sun protection
+and I wore it for the entire hike (I added a synthetic base-layer
+later on when it got colder in the north).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;short shorts&lt;/em&gt;! Ventilation, quick drying, can wear long johns over them
+during the night and feeling the air on my legs felt like
+freedom. It was really hard to switch back to wearing “normal” long
+jeans after the hike.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Sawyer Squeeze water filter&lt;/em&gt;: robust, fast (if back flushed enough)
+and great taste.&lt;/li&gt;
+  &lt;li&gt;One non-dirty water bottle for electrolyte tablets and the rest all
+dirty (drink directly out of them through the Sawyer Squeeze).&lt;/li&gt;
+  &lt;li&gt;bring a &lt;em&gt;360 camera&lt;/em&gt; to capture the full situation with one click.
+Ideally I would bring a wide angle camera but those are usually very
+heavy. Since the Ricoh Theta is only ~7 oz (200g) it is a very
+portable option for capturing wider fields of view than a smart phone.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;trash compactor bag&lt;/em&gt; as a water-proof bag liner.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Guthooks&lt;/em&gt; app for navigation.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Deuce of Spades&lt;/em&gt; trowel.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;rechargeable headlamp&lt;/em&gt;. Just recharge at every stop - no need to worry
+about buying expensive AAA batteries.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;inflatable sleeping pad NeoAir XLite&lt;/em&gt;. Light, warm and great for side sleepers.
+Slightly annoying to blow up every evening but once I learned the
+trick to jut lie down already while inflating it got way more
+comfortable.&lt;/li&gt;
+  &lt;li&gt;RAVPower &lt;em&gt;6700mAh battery pack&lt;/em&gt;. Most other hikers carried 10000mAh
+battery packs but I found the 6700mAh is sufficient even for 7 days
+without civilization if I keep my iPhone in airplane and battery
+saving mode.&lt;/li&gt;
+  &lt;li&gt;Small &lt;a href=&quot;https://www.amazon.com/gp/product/B01NBW1NJO/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;dual USB 5V 2.4A fast
+charger&lt;/a&gt;.
+Having two USB outputs really helped charge all my electronics
+quickly in town when wall outlets are sparse.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://people.csail.mit.edu/jstraub/images/blog/pctGear/Huaraches.jpg&quot; alt=&quot;Huaraches made from old insoles and shoe laces&quot; /&gt;&lt;/p&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Since I have been asked for multiple people, I am listing lessons I
+learned on the Pacific Crest Trail (PCT): things I
+changed, I would change, I would try, and things I would keep the same
+in terms of gear and backpacking techniques.</summary></entry><entry><title>Direction-Aware Semi-Dense SLAM</title><link href="http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" rel="alternate" type="text/html" title="Direction-Aware Semi-Dense SLAM" /><published>2017-09-17T00:00:00-07:00</published><updated>2017-09-17T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/">&lt;p&gt;To aide simultaneous localization and mapping (SLAM), future perception
+systems will incorporate forms of scene understanding.  In a step
+towards fully integrated probabilistic geometric scene understanding,
+localization and mapping we propose the first direction-aware
+semi-dense SLAM system.  It jointly infers the directional Stata Center
+World (SCW) segmentation and a surfel-based semi-dense map while
+performing real-time camera tracking.  The joint SCW map model connects
+a scene-wide Bayesian nonparametric Dirichlet Process von-Mises-Fisher
+mixture model (DP-vMF) prior on surfel orientations with the local
+surfel locations via a conditional random field (CRF).  Camera tracking
+leverages the SCW segmentation to improve efficiency via guided
+observation selection.  Results demonstrate improved SLAM accuracy and
+tracking efficiency at state of the art performance.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@inproceedings{straub2017dirAware,
+  author = {Straub, Julian and Cabezas, Randi and Leonard, John and Fisher III, John W.},
+  title = {Direction-Aware Semi-Dense SLAM},
+  year = {2017},
+  booktitle ={arxiv},
+  url={https://arxiv.org/abs/1709.05774}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>To aide simultaneous localization and mapping (SLAM), future perception
+systems will incorporate forms of scene understanding.  In a step
+towards fully integrated probabilistic geometric scene understanding,
+localization and mapping we propose the first direction-aware
+semi-dense SLAM system.  It jointly infers the directional Stata Center
+World (SCW) segmentation and a surfel-based semi-dense map while
+performing real-time camera tracking.  The joint SCW map model connects
+a scene-wide Bayesian nonparametric Dirichlet Process von-Mises-Fisher
+mixture model (DP-vMF) prior on surfel orientations with the local
+surfel locations via a conditional random field (CRF).  Camera tracking
+leverages the SCW segmentation to improve efficiency via guided
+observation selection.  Results demonstrate improved SLAM accuracy and
+tracking efficiency at state of the art performance.</summary></entry><entry><title>Nonparametric Directional Perception</title><link href="http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/" rel="alternate" type="text/html" title="Nonparametric Directional Perception" /><published>2017-05-17T00:00:00-07:00</published><updated>2017-05-17T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/">&lt;p&gt;Artificial perception systems, like autonomous cars and augmented
+reality headsets, rely on dense 3D sensing technology such as RGB-D
+cameras and LiDAR scanners.  Due to the structural simplicity of
+man-made environments, understanding and leveraging not only the 3D
+data but also the local orientations of the constituent surfaces, has
+huge potential.  From an indoor scene to large-scale urban
+environments, a large fraction of the surfaces can be described by just
+a few planes with even fewer different normal directions.  This
+sparsity is evident in the surface normal distributions, which exhibit
+a small number of concentrated clusters.  In this work, I draw a
+rigorous connection between surface normal distributions and 3D
+structure, and explore this connection in light of different
+environmental assumptions to further 3D perception.  Specifically, I
+propose the concepts of the Manhattan Frame and the unconstrained
+directional segmentation. These capture, in the space of surface
+normals, scenes composed of multiple Manhattan Worlds and more general
+Stata Center Worlds, in which the orthogonality assumption of the
+Manhattan World is not applicable.  This exploration is theoretically
+founded in Bayesian nonparametric models, which capture two key
+properties of the 3D sensing process of an artificial perception
+system: (1) the inherent sequential nature of data acquisition and (2)
+that the required model complexity grows with the amount of observed
+data.  Herein, I derive inference algorithms for directional clustering
+and segmentation which inherently exploit and respect these properties.
+The fundamental insights gleaned from the connection between surface
+normal distributions and 3D structure lead to practical advances in
+scene segmentation, drift-free rotation estimation, global point cloud
+registration and real-time direction-aware 3D reconstruction to aid
+artificial perception systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@phdthesis{straub2017phdthesis,
+  author       = {Straub, Julian}, 
+  title        = {Nonparametric Directional Perception},
+  school       = {Massachusetts Institute of Technology},
+  year         = 2017,
+  address      = {77 Massachusetts Avenue, Cambridge, MA 02139},
+  month        = 5,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Artificial perception systems, like autonomous cars and augmented
+reality headsets, rely on dense 3D sensing technology such as RGB-D
+cameras and LiDAR scanners.  Due to the structural simplicity of
+man-made environments, understanding and leveraging not only the 3D
+data but also the local orientations of the constituent surfaces, has
+huge potential.  From an indoor scene to large-scale urban
+environments, a large fraction of the surfaces can be described by just
+a few planes with even fewer different normal directions.  This
+sparsity is evident in the surface normal distributions, which exhibit
+a small number of concentrated clusters.  In this work, I draw a
+rigorous connection between surface normal distributions and 3D
+structure, and explore this connection in light of different
+environmental assumptions to further 3D perception.  Specifically, I
+propose the concepts of the Manhattan Frame and the unconstrained
+directional segmentation. These capture, in the space of surface
+normals, scenes composed of multiple Manhattan Worlds and more general
+Stata Center Worlds, in which the orthogonality assumption of the
+Manhattan World is not applicable.  This exploration is theoretically
+founded in Bayesian nonparametric models, which capture two key
+properties of the 3D sensing process of an artificial perception
+system: (1) the inherent sequential nature of data acquisition and (2)
+that the required model complexity grows with the amount of observed
+data.  Herein, I derive inference algorithms for directional clustering
+and segmentation which inherently exploit and respect these properties.
+The fundamental insights gleaned from the connection between surface
+normal distributions and 3D structure lead to practical advances in
+scene segmentation, drift-free rotation estimation, global point cloud
+registration and real-time direction-aware 3D reconstruction to aid
+artificial perception systems.</summary></entry><entry><title>Bayesian Inference with the von-Mises-Fisher Distribution</title><link href="http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/" rel="alternate" type="text/html" title="Bayesian Inference with the von-Mises-Fisher Distribution" /><published>2017-05-01T00:00:00-07:00</published><updated>2017-05-01T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Bayesian-Inference-with-the-von-Mises-Fisher-Distribution-in-3D/">&lt;p&gt;In &lt;a href=&quot;http://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInference.pdf&quot;&gt;this
+writeup&lt;/a&gt;,
+I give an introduction to the von-Mises-Fisher (vMF) distribution which
+is a commonly used isotropic distribution for directional data. The
+writeup is an excerpt of my &lt;a href=&quot;http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/index.html&quot;&gt;PhD thesis&lt;/a&gt; with a focus on Bayesian
+inference and computational considerations when working with the vMF
+distribution.  While the initial discussion is general, some of the
+results and derivations for efficient inference are specialized to 3D
+directional data. Specifically, after the introduction of the vMF
+distribution and two different conjugate prior distributions, I outline
+general sampling from the posterior vMF distribution before deriving
+the normalization of the prior and the marginal data distribution for
+3D. The last two sections show the cumulative density function and the
+entropy for the 3D vMF distribution.&lt;/p&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>In this
+writeup,
+I give an introduction to the von-Mises-Fisher (vMF) distribution which
+is a commonly used isotropic distribution for directional data. The
+writeup is an excerpt of my PhD thesis with a focus on Bayesian
+inference and computational considerations when working with the vMF
+distribution.  While the initial discussion is general, some of the
+results and derivations for efficient inference are specialized to 3D
+directional data. Specifically, after the introduction of the vMF
+distribution and two different conjugate prior distributions, I outline
+general sampling from the posterior vMF distribution before deriving
+the normalization of the prior and the marginal data distribution for
+3D. The last two sections show the cumulative density function and the
+entropy for the 3D vMF distribution.</summary></entry><entry><title>Pacific Crest Trail GPS Tracks for Garmin inReach</title><link href="http://people.csail.mit.edu/jstraub/blog/PCT-GPD-tracks_for-inReach/" rel="alternate" type="text/html" title="Pacific Crest Trail GPS Tracks for Garmin inReach" /><published>2017-04-30T00:00:00-07:00</published><updated>2017-04-30T00:00:00-07:00</updated><id>http://people.csail.mit.edu/jstraub/blog/PCT-GPD-tracks_for-inReach</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/blog/PCT-GPD-tracks_for-inReach/">&lt;p&gt;For my upcoming PCT through hike attempt, I bought a Garmin inReach
+Explorer GPS and satellite messenger. I intend to use the device mainly
+as safety precaution: my family and friends can see my progress and I
+can trigger a SOS from the device if something would go wrong.&lt;/p&gt;
+
+&lt;p&gt;The second use of the Garmin inReach is as a GPS navigation device. The
+popular &lt;a href=&quot;https://www.pctmap.net/gps/&quot;&gt;Halfmile PCT maps&lt;/a&gt; can be
+downloaded in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpx&lt;/code&gt; format suitable for uploading to the inReach.
+The only issue is that for some reason there is a 500 tracking point
+limit per track when uploading to the Garmin webpage to sync to the
+device. By default the Halfmile maps contain few long tracks with
+significantly more than 500 tracking points per track. The webpage only
+offers down sampling the tracks to 500 points. That does however lead
+to very low resolution tracks that might not be very useful. To get
+around this issue I modified a script from
+&lt;a href=&quot;https://github.com/tinuzz/gpx-tools&quot;&gt;tinuzz&lt;/a&gt; that originally only
+allows simpler operations on &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpx&lt;/code&gt; files to allow splitting up tracks
+with more than 500 points into multiple tracks of 500 tracking points
+each. The script can be found on my &lt;a href=&quot;https://github.com/jstraub/gpx-tools&quot;&gt;github in a fork of the original
+script.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;For convenience you can also directly download the processed Halfmile
+tracks for the whole PCT from
+&lt;a href=&quot;http://people.csail.mit.edu/jstraub/download/pct.zip&quot;&gt;here&lt;/a&gt;.
+Those &lt;code class=&quot;highlighter-rouge&quot;&gt;.gpx&lt;/code&gt; files can then just be uploaded to the Garmin inReach
+webpage and synced via the desktop or the smart phone application.&lt;/p&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>For my upcoming PCT through hike attempt, I bought a Garmin inReach
+Explorer GPS and satellite messenger. I intend to use the device mainly
+as safety precaution: my family and friends can see my progress and I
+can trigger a SOS from the device if something would go wrong.</summary></entry><entry><title>Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixtures</title><link href="http://people.csail.mit.edu/jstraub/pub/Efficient-Global-Point-Cloud-Alignment-using-Bayesian-Nonparametric-Mixtures/" rel="alternate" type="text/html" title="Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixtures" /><published>2017-03-01T00:00:00-08:00</published><updated>2017-03-01T00:00:00-08:00</updated><id>http://people.csail.mit.edu/jstraub/pub/Efficient-Global-Point-Cloud-Alignment-using-Bayesian-Nonparametric-Mixtures</id><content type="html" xml:base="http://people.csail.mit.edu/jstraub/pub/Efficient-Global-Point-Cloud-Alignment-using-Bayesian-Nonparametric-Mixtures/">&lt;p&gt;Point cloud alignment is a common problem in computer vision and robotics, with applications ranging from 3D object recognition to reconstruction.  We propose a novel approach to the alignment problem that utilizes Bayesian nonparametrics to describe the point cloud and surface normal densities, and branch and bound (BB) optimization to recover the relative transformation.  BB uses a novel, refinable, near-uniform tessellation of  rotation space using 4D tetrahedra, leading to more efficient optimization compared to the common axis-angle tessellation.  We provide objective function bounds for pruning given the proposed tessellation, and prove that BB converges to the optimum of the cost function along with providing its computational complexity.  Finally, we empirically demonstrate the efficiency of the proposed approach as well as its robustness to real-world conditions such as missing data and partial overlap.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibtex-a-idbibtexa&quot;&gt;Bibtex &lt;a id=&quot;bibtex&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@INPROCEEDINGS{straub2017globTrans,
+  author = {Straub, Julian and Campbell, Trevor and How, Jonathan P. and Fisher III, John W.},
+  title = {Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixtures},
+  booktitle = {CVPR},
+  year = {2017},
+  url = {https://arxiv.org/abs/1603.04868}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name>Julian Straub</name><email>jstraub@csail.mit.edu</email></author><summary>Point cloud alignment is a common problem in computer vision and robotics, with applications ranging from 3D object recognition to reconstruction.  We propose a novel approach to the alignment problem that utilizes Bayesian nonparametrics to describe the point cloud and surface normal densities, and branch and bound (BB) optimization to recover the relative transformation.  BB uses a novel, refinable, near-uniform tessellation of  rotation space using 4D tetrahedra, leading to more efficient optimization compared to the common axis-angle tessellation.  We provide objective function bounds for pruning given the proposed tessellation, and prove that BB converges to the optimum of the cost function along with providing its computational complexity.  Finally, we empirically demonstrate the efficiency of the proposed approach as well as its robustness to real-world conditions such as missing data and partial overlap.</summary></entry></feed>

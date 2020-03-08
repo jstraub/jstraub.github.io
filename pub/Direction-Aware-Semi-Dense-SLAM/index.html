@@ -1,0 +1,326 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Direction-Aware Semi-Dense SLAM - Julian Straub</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Julian Straub">
+<meta property="og:title" content="Direction-Aware Semi-Dense SLAM">
+
+
+  <link rel="canonical" href="http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/">
+  <meta property="og:url" content="http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/">
+
+
+
+  <meta property="og:description" content="To aide simultaneous localization and mapping (SLAM), future perceptionsystems will incorporate forms of scene understanding.  In a steptowards fully integrated probabilistic geometric scene understanding,localization and mapping we propose the first direction-awaresemi-dense SLAM system.  It jointly infers the directional Stata CenterWorld (SCW) segmentation and a surfel-based semi-dense map whileperforming real-time camera tracking.  The joint SCW map model connectsa scene-wide Bayesian nonparametric Dirichlet Process von-Mises-Fishermixture model (DP-vMF) prior on surfel orientations with the localsurfel locations via a conditional random field (CRF).  Camera trackingleverages the SCW segmentation to improve efficiency via guidedobservation selection.  Results demonstrate improved SLAM accuracy andtracking efficiency at state of the art performance.">
+
+
+
+
+
+  
+
+  
+
+
+
+  <meta property="og:image" content="http://people.csail.mit.edu/jstraub/images/tumbnails/teaserDirSLAM.png">
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2017-09-17T00:00:00-07:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Julian Straub",
+      "url" : "http://people.csail.mit.edu/jstraub",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://people.csail.mit.edu/jstraub/feed.xml" type="application/atom+xml" rel="alternate" title="Julian Straub Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://people.csail.mit.edu/jstraub/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://people.csail.mit.edu/jstraub/">Julian Straub</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/pub/index.html">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/blog/index.html">Blog</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/photography/index.html">Photography</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://people.csail.mit.edu/jstraub/_pages/nyu-mmf-dataset/index.html">MMF Dataset</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Direction-Aware Semi-Dense SLAM">
+    <meta itemprop="description" content="To aide simultaneous localization and mapping (SLAM), future perceptionsystems will incorporate forms of scene understanding.  In a steptowards fully integrated probabilistic geometric scene understanding,localization and mapping we propose the first direction-awaresemi-dense SLAM system.  It jointly infers the directional Stata CenterWorld (SCW) segmentation and a surfel-based semi-dense map whileperforming real-time camera tracking.  The joint SCW map model connectsa scene-wide Bayesian nonparametric Dirichlet Process von-Mises-Fishermixture model (DP-vMF) prior on surfel orientations with the localsurfel locations via a conditional random field (CRF).  Camera trackingleverages the SCW segmentation to improve efficiency via guidedobservation selection.  Results demonstrate improved SLAM accuracy andtracking efficiency at state of the art performance.">
+    <meta itemprop="datePublished" content="September 17, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Direction-Aware Semi-Dense SLAM
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>To aide simultaneous localization and mapping (SLAM), future perception
+systems will incorporate forms of scene understanding.  In a step
+towards fully integrated probabilistic geometric scene understanding,
+localization and mapping we propose the first direction-aware
+semi-dense SLAM system.  It jointly infers the directional Stata Center
+World (SCW) segmentation and a surfel-based semi-dense map while
+performing real-time camera tracking.  The joint SCW map model connects
+a scene-wide Bayesian nonparametric Dirichlet Process von-Mises-Fisher
+mixture model (DP-vMF) prior on surfel orientations with the local
+surfel locations via a conditional random field (CRF).  Camera tracking
+leverages the SCW segmentation to improve efficiency via guided
+observation selection.  Results demonstrate improved SLAM accuracy and
+tracking efficiency at state of the art performance.</p>
+
+<h2 id="bibtex-a-idbibtexa">Bibtex <a id="bibtex"></a></h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>@inproceedings{straub2017dirAware,
+  author = {Straub, Julian and Cabezas, Randi and Leonard, John and Fisher III, John W.},
+  title = {Direction-Aware Semi-Dense SLAM},
+  year = {2017},
+  booktitle ={arxiv},
+  url={https://arxiv.org/abs/1709.05774}
+}
+</code></pre>
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://people.csail.mit.edu/jstraub/categories/#pub" class="page__taxonomy-item" rel="tag">pub</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-17T00:00:00-07:00">September 17, 2017</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Direction-Aware Semi-Dense SLAM http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://people.csail.mit.edu/jstraub/pub/Direction-Aware-Semi-Dense-SLAM/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://people.csail.mit.edu/jstraub/pub/Nonparametric-Directional-Perception/" class="pagination--pager" title="Nonparametric Directional Perception
+">Previous</a>
+    
+    
+      <a href="http://people.csail.mit.edu/jstraub/blog/PCT-lessons-learned/" class="pagination--pager" title="Gear and Backpacking Lessons Learned from Through-Hiking the Pacific Crest Trail
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/jstraub"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://people.csail.mit.edu/jstraub/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Julian Straub. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="http://people.csail.mit.edu/jstraub/assets/js/main.min.js"></script>
+
+
+
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49442816-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+  </body>
+</html>
