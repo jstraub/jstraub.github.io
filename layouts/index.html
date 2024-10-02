@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<header>
+    <h1>{{ $.Params.title }}</h1>
+    {{- if $.Site.Params.theme_config.show_description -}}
+        <p>{{ $.Site.Params.description }}</p>
+    {{- end -}}
+</header>
+
+<img src= {{ $.Params.img }} style="float:right; width:256px; margin: 16px" />  
+
+{{ .Content }}
+
+{{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
+
+{{ end }}

@@ -1,0 +1,14 @@
+[[entries]]
+title = "Research"
+
+  [entries.post_list]
+  show_more = true
+  show_more_text = "See archive..."
+  show_more_url = "posts"
+
+
+[[entries]]
+title = "Other"
+entries = [
+   { title = "Reviewer CVPR 2021/2022/2023" }
+  ]
