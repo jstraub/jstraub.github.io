@@ -28,10 +28,10 @@
 	<table style="border:none" cellspacing="0" cellpadding="0">
         {{- range $post := $posts -}}
 		<tr>	
-			<td style="width:30%; border:none">	
-    			<img src={{ .Params.img }} style="width:30%,height=128px" />
+			<td style="width:25%; border:none; vertical-align:middle;">	
+    			<img src={{ .Params.img }} style="width:100%" />
 			</td>	
-			<td style="width:70%; border:none">	
+			<td style="width:75%; border:none; vertical-align:middle; padding:20px">	
             		<span>
 			{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}
 			</span>

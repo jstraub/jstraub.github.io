@@ -1,5 +1,5 @@
 [[entries]]
-title = "Research"
+title = ""
 
   [entries.post_list]
   show_more = true
@@ -7,8 +7,3 @@ title = "Research"
   show_more_url = "posts"
 
 
-[[entries]]
-title = "Other"
-entries = [
-   { title = "Reviewer CVPR 2021/2022/2023" }
-  ]
