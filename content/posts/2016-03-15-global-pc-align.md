@@ -7,8 +7,8 @@ draft: false
 ---
 **Julian Straub**, 
 [Trevor Campbell](https://trevorcampbell.me), 
-[Jonathan P How](https://aeroastro.mit.edu/people/jonathan-p-how), 
-John W Fisher III
+[Jonathan P. How](https://aeroastro.mit.edu/people/jonathan-p-how), 
+[John W. Fisher III](https://sli.csail.mit.edu/people/johnfisher)
 
 CVPR 2017
 [paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf)

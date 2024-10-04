@@ -5,7 +5,13 @@ page: "https://www.projectaria.com/"
 date: 2023-08-24
 draft: false
 ---
-[Jakob Engel](https://jakobengel.github.io), Kiran Somasundaram, Michael Goesele ... **Julian Straub**, ...
+[Jakob Engel](https://jakobengel.github.io), 
+Kiran Somasundaram, 
+[Michael Goesele](https://scholar.google.com/citations?user=56UhAooAAAAJ), 
+...,
+**Julian Straub**, ...
+[Richard Newcombe](https://rapiderobot.bitbucket.io)
+
 
 Arxiv
 [paper](https://arxiv.org/pdf/2308.13561)

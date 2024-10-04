@@ -5,9 +5,11 @@ page: "https://research.facebook.com/publications/reconstructing-scenes-with-mir
 date: 2018-08-01
 draft: false
 ---
-Thomas Whelan, Michael Goesele, Steven J Lovegrove, 
+[Thomas Whelan](https://www.thomaswhelan.ie), 
+[Michael Goesele](https://scholar.google.com/citations?user=56UhAooAAAAJ), 
+[Steven Lovegrove](https://scholar.google.com/citations?user=JVum8voAAAAJ)
 **Julian Straub**, 
-Simon Green, 
+[Simon Green](https://scholar.google.de/citations?user=VmHZtsEAAAAJ), 
 [Richard Szeliski](http://szeliski.org/), 
 Steven Butterfield, Shobhit Verma, 
 [Richard Newcombe](http://richardnewcombe.com/)

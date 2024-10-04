@@ -5,7 +5,9 @@ page: "https://openaccess.thecvf.com/content_iccv_2015/papers/Cabezas_Semantical
 date: 2015-12-07
 draft: false
 ---
-Randi Cabezas, **Julian Straub**, John W. Fisher III
+[Randi Cabezas](https://scholar.google.de/citations?user=abx4xHAAAAAJ), 
+**Julian Straub**, 
+[John W. Fisher III](https://sli.csail.mit.edu/people/johnfisher)
 
 ICCV 2015
 [paper](https://openaccess.thecvf.com/content_iccv_2015/papers/Cabezas_Semantically-Aware_Aerial_Reconstruction_ICCV_2015_paper.pdf)

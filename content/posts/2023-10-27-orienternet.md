@@ -5,15 +5,15 @@ page: "https://psarlin.com/orienternet/"
 date: 2023-10-27
 draft: false
 ---
-[Paul-Edouard Sarlin](https://psarlin.com/), 
+[Paul-Edouard Sarlin](https://psarlin.com), 
 [Daniel DeTone](https://danieldetone.com), 
 Tsun-Yi Yang, 
-Armen Avetisyan, 
+[Armen Avetisyan](https://scholar.google.de/citations?user=Ta4TDJoAAAAJ), 
 **Julian Straub**, 
-Tomasz Malisiewicz, 
+[Tomasz Malisiewicz](https://tom.ai), 
 Samuel Rota Bulo, 
 [Richard Newcombe](https://rapiderobot.bitbucket.io/), 
-Peter Kontschieder, 
+[Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ), 
 [Vasileios Balntas](https://vbalnt.github.io)
 
 CVPR 2023
