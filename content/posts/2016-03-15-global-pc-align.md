@@ -7,7 +7,7 @@ draft: false
 ---
 **Julian Straub**, 
 [Trevor Campbell](https://trevorcampbell.me), 
-Jonathan P How, 
+[Jonathan P How](https://aeroastro.mit.edu/people/jonathan-p-how), 
 John W Fisher III
 
 CVPR 2017
