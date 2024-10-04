@@ -5,7 +5,7 @@ page: "https://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInf
 date: 2017-01-01
 draft: false
 ---
-Julian Straub
+**Julian Straub**
 
 Arxiv
 [paper](https://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInference.pdf)

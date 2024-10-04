@@ -5,7 +5,7 @@ page: "https://psarlin.com/orienternet/"
 date: 2023-10-27
 draft: false
 ---
-Paul-Edouard Sarlin, Daniel DeTone, Tsun-Yi Yang, Armen Avetisyan, Julian Straub, Tomasz Malisiewicz, Samuel Rota Bulo, Richard Newcombe, Peter Kontschieder, Vasileios Balntas
+Paul-Edouard Sarlin, [Daniel DeTone](https://danieldetone.com), Tsun-Yi Yang, Armen Avetisyan, **Julian Straub**, Tomasz Malisiewicz, Samuel Rota Bulo, [Richard Newcombe](https://rapiderobot.bitbucket.io/), Peter Kontschieder, [Vasileios Balntas](https://vbalnt.github.io)
 
 CVPR 2023
 [paper](https://arxiv.org/pdf/2304.02009.pdf)

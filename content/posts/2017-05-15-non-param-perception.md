@@ -5,7 +5,7 @@ page: "https://dspace.mit.edu/handle/1721.1/112029"
 date: 2017-05-15
 draft: false
 ---
-Julian Straub
+****Julian Straub****
 
 PhD Thesis
 [thesis](https://dspace.mit.edu/bitstream/handle/1721.1/112029/1006379939-MIT.pdf?sequence=1&isAllowed=y)

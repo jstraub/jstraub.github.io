@@ -5,7 +5,7 @@ page: "https://openaccess.thecvf.com/content_CVPR_2019/papers/Chabra_StereoDRNet
 date: 2019-10-27
 draft: false
 ---
-Rohan Chabra, Julian Straub, Christopher Sweeney, Richard Newcombe, Henry Fuchs
+Rohan Chabra, **Julian Straub**, Christopher Sweeney, [Richard Newcombe](https://rapiderobot.bitbucket.io/), Henry Fuchs
 
 CVPR 2019
 [paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chabra_StereoDRNet_Dilated_Residual_StereoNet_CVPR_2019_paper.pdf)

@@ -5,7 +5,7 @@ page: "http://openaccess.thecvf.com/content_cvpr_2017/papers/Straub_Efficient_Gl
 date: 2016-03-15
 draft: false
 ---
-Julian Straub, Trevor Campbell, Jonathan P How, John W Fisher III
+**Julian Straub**, Trevor Campbell, Jonathan P How, John W Fisher III
 
 CVPR 2017
 [paper](http://openaccess.thecvf.com/content_cvpr_2017/papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf)

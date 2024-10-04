@@ -5,7 +5,7 @@ page: "https://www.projectaria.com/"
 date: 2023-08-24
 draft: false
 ---
-Jakob Engel, Kiran Somasundaram, Michael Goesele ... Julian Straub, ...
+[Jakob Engel](https://jakobengel.github.io), Kiran Somasundaram, Michael Goesele ... **Julian Straub**, ...
 
 Arxiv
 [paper](https://arxiv.org/pdf/2308.13561)
