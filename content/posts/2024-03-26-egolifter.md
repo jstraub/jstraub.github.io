@@ -5,7 +5,12 @@ page: "https://egolifter.github.io/"
 date: 2024-03-26
 draft: false
 ---
-Qiao Gu, Zhaoyang Lv, Duncan Frost, Simon Green, **Julian Straub**, Chris Sweeney
+[Qiao Gu](https://georgegu1997.github.io), 
+[Zhaoyang Lv](https://lvzhaoyang.github.io), 
+[Duncan Frost](https://scholar.google.com/citations?user=P9l4zHIAAAAJ), 
+[Simon Green](https://scholar.google.de/citations?user=VmHZtsEAAAAJ), 
+**Julian Straub**, 
+[Chris Sweeney](https://scholar.google.com.hk/citations?user=h-CpQGgAAAAJ)
 
 CVPR 2024
 [paper](https://arxiv.org/pdf/2403.18118)
