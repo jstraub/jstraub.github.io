@@ -6,7 +6,7 @@ date: 2023-08-24
 draft: false
 ---
 [Jakob Engel](https://jakobengel.github.io), 
-Kiran Somasundaram, 
+[Kiran Somasundaram](https://scholar.google.com/citations?user=gf0uK4AAAAAJ), 
 [Michael Goesele](https://scholar.google.com/citations?user=56UhAooAAAAJ), 
 ...,
 **Julian Straub**, ...

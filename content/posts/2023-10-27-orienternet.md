@@ -7,11 +7,11 @@ draft: false
 ---
 [Paul-Edouard Sarlin](https://psarlin.com), 
 [Daniel DeTone](https://danieldetone.com), 
-Tsun-Yi Yang, 
+[Tsun-Yi Yang](https://shamangary.github.io), 
 [Armen Avetisyan](https://scholar.google.de/citations?user=Ta4TDJoAAAAJ), 
 **Julian Straub**, 
 [Tomasz Malisiewicz](https://tom.ai), 
-Samuel Rota Bulo, 
+[Samuel Rota Bulo](https://scholar.google.com/citations?user=484sccEAAAAJ), 
 [Richard Newcombe](https://rapiderobot.bitbucket.io/), 
 [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ), 
 [Vasileios Balntas](https://vbalnt.github.io)

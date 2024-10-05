@@ -16,11 +16,11 @@ Reviewing Robotics:
 - ICRA 2016/2023
 - IROS 2016
 
-## Previous Mentees
+## Previous Mentees and Interns
 
 - [Qiao Gu](https://georgegu1997.github.io)
-- [Yiming Xie](https://ymingxie.github.io), 
-- [Kejie Li](https://likojack.github.io/kejieli/), 
-- [Rohan Chabra](https://scholar.google.com/citations?user=A3x7UAYAAAAJ), 
-- [Erik Wijmans](https://wijmans.xyz), 
+- [Yiming Xie](https://ymingxie.github.io)
+- [Kejie Li](https://likojack.github.io/kejieli/)
+- [Rohan Chabra](https://scholar.google.com/citations?user=A3x7UAYAAAAJ)
+- [Erik Wijmans](https://wijmans.xyz)
 
