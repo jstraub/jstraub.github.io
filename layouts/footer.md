@@ -1,3 +1,8 @@
+## Writeups
+
+- [Bayesian Inference with the von-Mises-Fisher Distribution in 3D](/download/straub2017vonMisesFisherInference.pdf)
+- [3D Transformation Cookbook](/download/straubTransformationCookbook.pdf)
+
 ## Community Service
 
 Reviewing CV:
