@@ -13,7 +13,7 @@ draft: false
 CVPR 2015
 [paper](https://openaccess.thecvf.com/content_cvpr_2015/papers/Straub_Small-Variance_Nonparametric_Clustering_2015_CVPR_paper.pdf)
 
-We show how to derive a fast non-parametric DP-means algorithm, DP-vMF-means, for directional data like surface normals. This allows us to analyse surface normal distributions of depth images.
+We show how to derive a fast nonparametric DP-means algorithm, DP-vMF-means, for directional data like surface normals. This allows us to analyze surface normal distributions of depth images.
 
 
 

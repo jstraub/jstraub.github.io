@@ -15,4 +15,4 @@ draft: false
 ICIP 2013
 [paper](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ead7fff772dfb41233fa5351c8e7fbbec303dc81)
 
-We use locality sensitive hashing to speedup binary feature retrieval for fast camera relocalization.
+We use locality-sensitive hashing to speed up binary feature retrieval for fast camera relocalization.

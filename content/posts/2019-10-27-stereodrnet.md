@@ -14,6 +14,6 @@ draft: false
 CVPR 2019
 [paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chabra_StereoDRNet_Dilated_Residual_StereoNet_CVPR_2019_paper.pdf)
 
-StereoDRNet enables the estimation of high quality depth maps enabling high quality reconstruction by passive stereo video.
+StereoDRNet enables the estimation of metrically accurate depth maps enabling high-quality reconstruction by passive stereo video.
 
 

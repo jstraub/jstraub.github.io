@@ -22,4 +22,4 @@ He did his Diploma thesis in [Eckehard Steinbach](https://www.professoren.tum.de
 
 ## Research
 
-My current research interest are problems that involve 3D localization, recognition and description of objects and surfaces from egocentric video streams in scalable and generalizable ways. 
+My current research interests are problems that involve 3D localization, recognition and description of objects and surfaces from egocentric video streams in scalable and generalizable ways. 
