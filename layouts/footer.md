@@ -5,6 +5,9 @@
 
 ## Community Service
 
+Area Chair: 
+- CVPR 2026
+
 Reviewing Computer Vision:
 - CVPR: 2015 2018* 2019 2020* 2022 2023 2024* 2025*
 - ICCV: 2023 2025
