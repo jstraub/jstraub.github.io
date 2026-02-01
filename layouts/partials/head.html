@@ -2,16 +2,48 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {{ if .IsPage }} <meta name="description" content="{{ .Summary }}">  {{ end }}
+  <meta name="author" content="{{ .Title }}" />
 
-  <title>
-    {{ if not .IsHome }}
-      {{ .Title }}
-    {{ else }}
-      {{ $.Site.Title }}
-    {{ end }}
-  </title>
+  {{- if .IsPage }}
+  <meta name="description" content="{{ .Summary | plainify | htmlUnescape | truncate 160 }}">
+  {{- else }}
+  <meta name="description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception">
+  {{- end }}
 
+  <title>{{ .Title }}</title>
+
+  <link rel="canonical" href="{{ .Permalink }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}" />
+  {{- if .IsPage }}
+  <meta property="og:description" content="{{ .Summary | plainify | htmlUnescape | truncate 200 }}" />
+  <meta property="og:type" content="article" />
+  {{- else }}
+  <meta property="og:description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception" />
+  <meta property="og:type" content="website" />
+  {{- end }}
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{- if .Params.img }}
+  <meta property="og:image" content="{{ .Params.img | absURL }}" />
+  {{- else }}
+  <meta property="og:image" content="{{ "images/headshot.jpg" | absURL }}" />
+  {{- end }}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@jstraub6" />
+  <meta name="twitter:title" content="{{ .Title }}" />
+  {{- if .IsPage }}
+  <meta name="twitter:description" content="{{ .Summary | plainify | htmlUnescape | truncate 200 }}" />
+  {{- else }}
+  <meta name="twitter:description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception" />
+  {{- end }}
+  {{- if .Params.img }}
+  <meta name="twitter:image" content="{{ .Params.img | absURL }}" />
+  {{- else }}
+  <meta name="twitter:image" content="{{ "images/headshot.jpg" | absURL }}" />
+  {{- end }}
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ $.Site.Params.favicon | relURL }}" />
   {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}

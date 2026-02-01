@@ -14,7 +14,7 @@ He did his Diploma thesis in [Eckehard Steinbach](https://www.professoren.tum.de
 
 
 [Email](mailto:jstraub@csail.mit.edu)
-[Resume](/download/JulianStraub_Resume.pdf)
+[Resume](/download/JulianStraub_resume.pdf)
 [CV](/download/JulianStraub_CV.pdf)
 [Scholar](https://scholar.google.de/citations?user=49_cCT8AAAAJ)
 [Twitter](https://x.com/jstraub6)

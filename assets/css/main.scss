@@ -113,7 +113,7 @@ pre {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid black;
+  border: thin solid currentColor;
   border-collapse: collapse;
   padding: 0.4rem;
 }
@@ -132,7 +132,7 @@ code.has-jax {
 
 blockquote {
   font-style: italic;
-  border: thin solid black;
+  border: thin solid currentColor;
   padding: 1rem;
 
   p { margin: 0; }

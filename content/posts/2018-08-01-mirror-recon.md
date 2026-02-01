@@ -7,7 +7,7 @@ draft: false
 ---
 [Thomas Whelan](https://www.thomaswhelan.ie), 
 [Michael Goesele](https://scholar.google.com/citations?user=56UhAooAAAAJ), 
-[Steven Lovegrove](https://scholar.google.com/citations?user=JVum8voAAAAJ)
+[Steven Lovegrove](https://scholar.google.com/citations?user=JVum8voAAAAJ),
 **Julian Straub**, 
 [Simon Green](https://scholar.google.de/citations?user=VmHZtsEAAAAJ), 
 [Richard Szeliski](http://szeliski.org/), 

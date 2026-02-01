@@ -9,22 +9,20 @@
 {{ if  .Site.Params.theme_config.isListGroupByDate  }}
     {{ range .Pages.GroupByDate "2006 Year" }}
     <p>{{ .Key }}</p>
-    <ul>
+    <table style="border:none" cellspacing="0" cellpadding="0">
         {{ range .Pages }}
-        <li>
-		<tr>	
-			<td>	
-			<img src="{{ .Img }}">
-			</td>	
-			<td>	
+		<tr>
+			<td style="width:25%; border:none; vertical-align:middle;">
+			<img src="{{ .Params.img }}" alt="{{ .Title }}" style="width:100%" />
+			</td>
+			<td style="width:75%; border:none; vertical-align:middle; padding:20px">
 			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 			<br>
-    			{{ .Content }}
-			</td>	
-		</tr>	
-	</li>
+    			{{ .Summary }}
+			</td>
+		</tr>
         {{ end }}
-    </ul>
+    </table>
     {{ end }}
 {{ else }}
     {{ partial "post_list.html" (dict "context" . "section" .Section)}}
