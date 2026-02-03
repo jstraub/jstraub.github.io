@@ -11,8 +11,9 @@ draft: false
 [Richard Newcombe](https://rapiderobot.bitbucket.io/), 
 [Henry Fuchs](https://cs.unc.edu/person/henry-fuchs)
 
-CVPR 2019
+`CVPR 06/2019`
 [paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chabra_StereoDRNet_Dilated_Residual_StereoNet_CVPR_2019_paper.pdf)
+{.contact-links}
 
 StereoDRNet enables the estimation of metrically accurate depth maps enabling high-quality reconstruction by passive stereo video.
 

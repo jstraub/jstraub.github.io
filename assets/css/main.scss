@@ -33,7 +33,19 @@
 
    table, th, td {
      border: thin solid $--primary-text-color;
+   }
 
+   .paper-list {
+     border: none;
+     border-top: 1px solid rgba($--primary-text-color, 0.1);
+     border-bottom: 1px solid rgba($--primary-text-color, 0.1);
+   }
+   .paper-list td {
+     border: none;
+     border-bottom: 1px solid rgba($--primary-text-color, 0.1);
+   }
+   .paper-list tr:last-child td {
+     border-bottom: none;
    }
   .toc {
     border: thin solid $--primary-text-color;
@@ -68,9 +80,9 @@ body[a="light"] { @include light-appearance; }
 html { height: 100%; }
 
 body {
-  font-family: monospace;
-  font-size: 12px;
-  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -87,7 +99,7 @@ p { margin: 0.4rem 0; }
 li { margin: 0.4rem 0; }
 
 .w {
-  max-width: 640px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
@@ -97,11 +109,9 @@ li { margin: 0.4rem 0; }
 }
 
 hr {
-  text-align: center;
   border: 0;
-
-  &:before { content: '/////' }
-  &:after { content: attr(data-content) '/////' }
+  border-top: 1px solid currentColor;
+  opacity: 0.2;
 }
 
 pre {
@@ -147,4 +157,97 @@ img {
 figcaption {
   text-align: center;
   opacity: 0.5;
+}
+
+// -------------- PROFILE IMAGE -------------- //
+.profile-img {
+  float: right;
+  width: 35%;
+  margin: 0 0 1.5rem 2rem;
+  border-radius: 50%;
+}
+
+// -------------- CONTACT LINKS -------------- //
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+
+  code {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid currentColor;
+    border-radius: 1rem;
+    font-size: 0.85em;
+    font-family: inherit;
+    background: transparent !important;
+    color: inherit !important;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid currentColor;
+    border-radius: 1rem;
+    font-size: 0.85em;
+    text-decoration: none;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+}
+
+// -------------- PAPER LIST -------------- //
+.paper-list {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    vertical-align: top;
+  }
+
+  td {
+    border: none;
+    padding: 0.6rem 0;
+  }
+
+  .paper-thumb {
+    width: 25%;
+    vertical-align: middle;
+    padding-right: 1.2rem;
+
+    img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  .paper-info {
+    width: 75%;
+    vertical-align: middle;
+
+    p { margin: 0.2rem 0; }
+    .contact-links { margin: 0.3rem 0; }
+  }
+
+  .paper-date {
+    font-size: 0.8em;
+    opacity: 0.5;
+  }
+
+  .paper-title {
+    font-weight: 600;
+    font-size: 1.05em;
+  }
+}
+
+.paper-list + p a {
+  font-size: 0.9em;
+  opacity: 0.6;
 }

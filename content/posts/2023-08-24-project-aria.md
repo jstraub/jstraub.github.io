@@ -13,9 +13,10 @@ draft: false
 [Richard Newcombe](https://rapiderobot.bitbucket.io)
 
 
-Arxiv
+`Arxiv 08/2023`
 [paper](https://arxiv.org/pdf/2308.13561)
 [github](https://github.com/facebookresearch/projectaria_tools)
+{.contact-links}
 
 The Project Aria device from my team at Meta Reality Labs Research is an egocentric, multi-modal data recording and streaming device with the goal to foster and accelerate research. [Join Project Aria](https://www.projectaria.com/research-kit/).
 

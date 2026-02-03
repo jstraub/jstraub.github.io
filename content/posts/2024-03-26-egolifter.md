@@ -12,9 +12,10 @@ draft: false
 **Julian Straub**, 
 [Chris Sweeney](https://scholar.google.com.hk/citations?user=h-CpQGgAAAAJ)
 
-CVPR 2024
+`CVPR 06/2024`
 [paper](https://arxiv.org/pdf/2403.18118)
 [github](https://egolifter.github.io/)
+{.contact-links}
 
 We show how to reconstruct and instance segment egocentric Project Aria data using Gaussian Splats.
 

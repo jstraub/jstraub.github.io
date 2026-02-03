@@ -25,21 +25,17 @@
     {{- if .limit }}
         {{ $posts = (first .limit $posts ) }}
     {{ end }}
-	<table style="border:none" cellspacing="0" cellpadding="0">
+	<table class="paper-list">
         {{- range $post := $posts -}}
-		<tr>	
-			<td style="width:25%; border:none; vertical-align:middle;">	
-    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" style="width:100%" />
-			</td>	
-			<td style="width:75%; border:none; vertical-align:middle; padding:20px">	
-            		<span>
-			{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}
-			</span>
-            		<a href="{{ .Params.page }}">{{ $post.Title }}</a>
-			<br>
+		<tr>
+			<td class="paper-thumb">
+    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" />
+			</td>
+			<td class="paper-info">
+            		<a class="paper-title" href="{{ .Params.page }}">{{ $post.Title }}</a>
     			{{ $post.Content }}
-			</td>	
-		</tr>	
+			</td>
+		</tr>
         {{ end }}
 	</table>
         {{- if and .show_more $limit_exceeded }}

@@ -5,7 +5,7 @@
 
 ## Community Service
 
-Area Chair: 
+Area Chair:
 - CVPR 2026
 
 Reviewing Computer Vision:

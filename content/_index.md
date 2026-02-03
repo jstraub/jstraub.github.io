@@ -19,6 +19,7 @@ He did his Diploma thesis in [Eckehard Steinbach](https://www.professoren.tum.de
 [Scholar](https://scholar.google.de/citations?user=49_cCT8AAAAJ)
 [Twitter](https://x.com/jstraub6)
 [Github](https://github.com/jstraub)
+{.contact-links}
 
 ## Research
 

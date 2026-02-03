@@ -14,7 +14,8 @@ draft: false
 Steven Butterfield, Shobhit Verma, 
 [Richard Newcombe](http://richardnewcombe.com/)
 
-SIGGRAPH 2018
+`SIGGRAPH 08/2018`
 [paper](https://www.thomaswhelan.ie/Whelan18siggraph.pdf)
+{.contact-links}
 
 We reconstruct mirrors in scenes by detecting a marker on the scanning device. This solves one of the most common failure cases of indoor reconstruction.

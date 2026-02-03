@@ -9,14 +9,14 @@
 {{ if  .Site.Params.theme_config.isListGroupByDate  }}
     {{ range .Pages.GroupByDate "2006 Year" }}
     <p>{{ .Key }}</p>
-    <table style="border:none" cellspacing="0" cellpadding="0">
+    <table class="paper-list">
         {{ range .Pages }}
 		<tr>
-			<td style="width:25%; border:none; vertical-align:middle;">
-			<img src="{{ .Params.img }}" alt="{{ .Title }}" style="width:100%" />
+			<td class="paper-thumb">
+			<img src="{{ .Params.img }}" alt="{{ .Title }}" />
 			</td>
-			<td style="width:75%; border:none; vertical-align:middle; padding:20px">
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<td class="paper-info">
+			<a class="paper-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
 			<br>
     			{{ .Summary }}
 			</td>
