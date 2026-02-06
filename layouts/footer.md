@@ -5,24 +5,12 @@
 
 ## Community Service
 
-Area Chair:
-- CVPR 2026
+Area Chair: `CVPR` 26
 
-Reviewing Computer Vision:
-- CVPR: 2015 2018* 2019 2020* 2022 2023 2024* 2025*
-- ICCV: 2023 2025
-- ECCV: 2020 2022 2024
-- TPAMI: 2016 2017
-
-Reviewing Machine Learning:
-- NeurIPS: 2015 2019 2022 2023
-- ICLR: 2023 2024 2025
-- AISTATS: 2015
-- ICML: 2015 2024
-
-Reviewing Robotics:
-- ICRA: 2016 2023
-- IROS: 2016
+Reviewing:
+- **CV:** `CVPR` 15, 18\*, 19, 20\*, 22–25\* · `ICCV` 23, 25 · `ECCV` 20, 22, 24 · `TPAMI` 16–17
+- **ML:** `NeurIPS` 15, 19, 22–23 · `ICLR` 23–25 · `AISTATS` 15 · `ICML` 15, 24
+- **Robotics:** `ICRA` 16, 23 · `IROS` 16
 
 \* outstanding reviewer
 

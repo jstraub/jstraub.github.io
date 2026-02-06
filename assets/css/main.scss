@@ -251,3 +251,16 @@ figcaption {
   font-size: 0.9em;
   opacity: 0.6;
 }
+
+// -------------- INLINE CODE AS SUBTLE PILLS -------------- //
+li code, p code {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 0.8rem;
+  font-size: 0.85em;
+  font-family: inherit;
+  background: transparent !important;
+  color: inherit !important;
+  opacity: 0.7;
+}
