@@ -25,20 +25,20 @@
     {{- if .limit }}
         {{ $posts = (first .limit $posts ) }}
     {{ end }}
-	<table class="paper-list">
+	<div class="paper-list">
         {{- range $post := $posts -}}
-		<tr>
-			<td class="paper-thumb">
+		<article class="paper-item">
+			<div class="paper-thumb">
     			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" loading="lazy" />
-			</td>
-			<td class="paper-info">
+			</div>
+			<div class="paper-info">
             		<a class="paper-title" href="{{ .Params.page }}">{{ $post.Title }}</a>
 				<time class="paper-date" datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "2006-01-02" }}</time>
     			{{ $post.Content }}
-			</td>
-		</tr>
+			</div>
+		</article>
         {{ end }}
-	</table>
+	</div>
         {{- if and .show_more $limit_exceeded }}
             <p><a href="{{ .show_more_url | relURL }}">{{ .show_more_text | default "Show more..." }}</a></p>
         {{ end }}

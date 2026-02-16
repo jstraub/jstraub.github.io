@@ -9,20 +9,20 @@
 {{ if  .Site.Params.theme_config.isListGroupByDate  }}
     {{ range .Pages.GroupByDate "2006 Year" }}
     <p>{{ .Key }}</p>
-    <table class="paper-list">
+    <div class="paper-list">
         {{ range .Pages }}
-		<tr>
-			<td class="paper-thumb">
+		<article class="paper-item">
+			<div class="paper-thumb">
 			<img src="{{ .Params.img }}" alt="{{ .Title }}" loading="lazy" />
-			</td>
-			<td class="paper-info">
+			</div>
+			<div class="paper-info">
 			<a class="paper-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
 			<br>
     			{{ .Summary }}
-			</td>
-		</tr>
+			</div>
+		</article>
         {{ end }}
-    </table>
+    </div>
     {{ end }}
 {{ else }}
     {{ partial "post_list.html" (dict "context" . "section" .Section)}}

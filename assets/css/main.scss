@@ -36,15 +36,13 @@
    }
 
    .paper-list {
-     border: none;
      border-top: 1px solid rgba($--primary-text-color, 0.1);
      border-bottom: 1px solid rgba($--primary-text-color, 0.1);
    }
-   .paper-list td {
-     border: none;
+   .paper-item {
      border-bottom: 1px solid rgba($--primary-text-color, 0.1);
    }
-   .paper-list tr:last-child td {
+   .paper-item:last-child {
      border-bottom: none;
    }
   .toc {
@@ -204,22 +202,16 @@ figcaption {
 
 // -------------- PAPER LIST -------------- //
 .paper-list {
-  border: none;
-  border-collapse: collapse;
   width: 100%;
+}
 
-  tr {
-    vertical-align: top;
-  }
-
-  td {
-    border: none;
-    padding: 0.6rem 0;
-  }
+.paper-item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
 
   .paper-thumb {
-    width: 25%;
-    vertical-align: middle;
+    flex: 0 0 25%;
     padding-right: 1.2rem;
 
     img {
@@ -229,8 +221,7 @@ figcaption {
   }
 
   .paper-info {
-    width: 75%;
-    vertical-align: middle;
+    flex: 1;
 
     p { margin: 0.2rem 0; }
     .contact-links { margin: 0.3rem 0; }
@@ -261,23 +252,16 @@ figcaption {
 
 // -------------- MOBILE PAPER LIST -------------- //
 @media (max-width: 500px) {
-  .paper-list {
-    tr {
-      display: flex;
-      flex-direction: column;
-      padding: 0.6rem 0;
-    }
+  .paper-item {
+    flex-direction: column;
 
     .paper-thumb {
+      flex: 0 0 auto;
       width: 100%;
       padding-right: 0;
       padding-bottom: 0.4rem;
 
       img { max-width: 60%; }
-    }
-
-    .paper-info {
-      width: 100%;
     }
   }
 }
