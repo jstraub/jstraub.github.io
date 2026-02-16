@@ -13,8 +13,7 @@ draft: false
 [Richard Newcombe](https://rapiderobot.bitbucket.io)
 
 
-`Arxiv 08/2023`
-[paper](https://arxiv.org/pdf/2308.13561)
+[Arxiv 08/2023](https://arxiv.org/pdf/2308.13561)
 [github](https://github.com/facebookresearch/projectaria_tools)
 {.contact-links}
 

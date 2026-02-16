@@ -9,8 +9,7 @@ draft: false
 **Julian Straub**, 
 [John W. Fisher III](https://sli.csail.mit.edu/people/johnfisher)
 
-`ICCV 12/2015`
-[paper](https://openaccess.thecvf.com/content_iccv_2015/papers/Cabezas_Semantically-Aware_Aerial_Reconstruction_ICCV_2015_paper.pdf)
+[ICCV 2015](https://openaccess.thecvf.com/content_iccv_2015/papers/Cabezas_Semantically-Aware_Aerial_Reconstruction_ICCV_2015_paper.pdf)
 {.contact-links}
 
 We propose a probabilistic generative model for inferring semantically-informed aerial reconstructions from multi-modal data within a consistent mathematical framework.

@@ -7,7 +7,7 @@ draft: false
 ---
 **Julian Straub**
 
-[writeup](https://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInference.pdf)
+[Writeup 2017](https://people.csail.mit.edu/jstraub/download/straub2017vonMisesFisherInference.pdf)
 {.contact-links}
 
 All you want to know about Bayesian inference with von-Mises-Fisher distributions in 3D.

@@ -16,9 +16,10 @@ draft: false
 [Peter Kontschieder](https://scholar.google.com/citations?user=CxbDDRMAAAAJ), 
 [Vasileios Balntas](https://vbalnt.github.io)
 
-`CVPR 06/2023`
-[paper](https://arxiv.org/pdf/2304.02009.pdf)
+[CVPR 2023](https://arxiv.org/pdf/2304.02009.pdf)
 [code](https://github.com/facebookresearch/OrienterNet)
+[demo](https://sarlinpe-orienternet.hf.space)
+[video](https://youtu.be/wglW8jnupSs)
 {.contact-links}
 
 We introduce the first deep neural network that can accurately localize an image using the same 2D semantic maps that humans use to orient themselves. OrienterNet leverages free and global maps from OpenStreetMap and is thus more accessible and more efficient than existing approaches.

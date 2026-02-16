@@ -12,8 +12,8 @@ draft: false
 [Andreas Möller](https://scholar.google.com/citations?user=gFJpHvAAAAAJ), 
 [Eckehard Steinbach](https://www.professoren.tum.de/en/steinbach-eckehard)
 
-`ICIP 09/2013`
-[paper](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ead7fff772dfb41233fa5351c8e7fbbec303dc81)
+[ICIP 2013](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ead7fff772dfb41233fa5351c8e7fbbec303dc81)
+[github](https://github.com/jstraub/ptamRosBinaryFeatureRelocalization)
 {.contact-links}
 
 We use locality-sensitive hashing to speed up binary feature retrieval for fast camera relocalization.
