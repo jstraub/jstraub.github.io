@@ -28,6 +28,12 @@
     endLevel = 3
     ordered = false
 
+baseURL = "https://jstraub.github.io/"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
 [params]
   [params.theme_config]
     appearance = "auto"

@@ -2,7 +2,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="{{ .Title }}" />
+  <meta name="author" content="Julian Straub" />
 
   {{- if .IsPage }}
   <meta name="description" content="{{ .Summary | plainify | htmlUnescape | truncate 160 }}">
@@ -51,4 +51,45 @@
   {{ $style := $sass | toCSS $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
+
+  <!-- JSON-LD Structured Data -->
+  {{- if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Julian Straub",
+    "jobTitle": "Research Scientist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Meta Reality Labs Research"
+    },
+    "url": "{{ .Permalink }}",
+    "image": "{{ "images/headshot.jpg" | absURL }}",
+    "sameAs": [
+      "https://scholar.google.de/citations?user=49_cCT8AAAAJ",
+      "https://github.com/jstraub",
+      "https://x.com/jstraub6"
+    ]
+  }
+  </script>
+  {{- else if .IsPage }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "{{ .Title }}",
+    "datePublished": "{{ .Date.Format "2006-01-02" }}",
+    "url": "{{ .Permalink }}",
+    {{- if .Params.img }}
+    "image": "{{ .Params.img | absURL }}",
+    {{- end }}
+    "author": {
+      "@type": "Person",
+      "name": "Julian Straub",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+  </script>
+  {{- end }}
 </head>

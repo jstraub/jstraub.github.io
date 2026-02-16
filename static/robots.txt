@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jstraub.github.io/sitemap.xml

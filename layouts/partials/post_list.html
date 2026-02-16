@@ -29,10 +29,11 @@
         {{- range $post := $posts -}}
 		<tr>
 			<td class="paper-thumb">
-    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" />
+    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" loading="lazy" />
 			</td>
 			<td class="paper-info">
             		<a class="paper-title" href="{{ .Params.page }}">{{ $post.Title }}</a>
+				<time class="paper-date" datetime="{{ $post.Date.Format "2006-01-02" }}">{{ $post.Date.Format "2006-01-02" }}</time>
     			{{ $post.Content }}
 			</td>
 		</tr>

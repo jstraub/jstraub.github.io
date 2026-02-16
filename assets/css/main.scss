@@ -237,8 +237,15 @@ figcaption {
   }
 
   .paper-date {
-    font-size: 0.8em;
-    opacity: 0.5;
+    // Visually hidden but accessible to parsers/screen readers
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
   }
 
   .paper-title {
@@ -250,6 +257,29 @@ figcaption {
 .paper-list + p a {
   font-size: 0.9em;
   opacity: 0.6;
+}
+
+// -------------- MOBILE PAPER LIST -------------- //
+@media (max-width: 500px) {
+  .paper-list {
+    tr {
+      display: flex;
+      flex-direction: column;
+      padding: 0.6rem 0;
+    }
+
+    .paper-thumb {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 0.4rem;
+
+      img { max-width: 60%; }
+    }
+
+    .paper-info {
+      width: 100%;
+    }
+  }
 }
 
 // -------------- INLINE CODE AS SUBTLE PILLS -------------- //
