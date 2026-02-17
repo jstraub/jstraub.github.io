@@ -35,6 +35,7 @@ baseURL = "https://jstraub.github.io/"
   priority = 0.5
 
 [params]
+  favicon = "/images/favicon.png"
   [params.theme_config]
     appearance = "auto"
     back_home_text = ".."
