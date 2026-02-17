@@ -3,6 +3,7 @@ title: "Semantically-Aware Aerial Reconstruction from Multi-Modal Data"
 img: "/images/aerial-sem-recon.png"
 page: "https://openaccess.thecvf.com/content_iccv_2015/papers/Cabezas_Semantically-Aware_Aerial_Reconstruction_ICCV_2015_paper.pdf"
 date: 2015-12-07
+description: "We propose a probabilistic generative model for inferring semantically-informed aerial reconstructions from multi-modal data within a consistent mathematical framework."
 draft: false
 ---
 [Randi Cabezas](https://scholar.google.de/citations?user=abx4xHAAAAAJ), 

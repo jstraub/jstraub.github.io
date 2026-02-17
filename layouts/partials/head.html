@@ -5,7 +5,7 @@
   <meta name="author" content="Julian Straub" />
 
   {{- if .IsPage }}
-  <meta name="description" content="{{ .Summary | plainify | htmlUnescape | truncate 160 }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 160 }}{{ end }}">
   {{- else }}
   <meta name="description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception">
   {{- end }}
@@ -17,7 +17,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title }}" />
   {{- if .IsPage }}
-  <meta property="og:description" content="{{ .Summary | plainify | htmlUnescape | truncate 200 }}" />
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 200 }}{{ end }}" />
   <meta property="og:type" content="article" />
   {{- else }}
   <meta property="og:description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception" />
@@ -35,7 +35,7 @@
   <meta name="twitter:site" content="@jstraub6" />
   <meta name="twitter:title" content="{{ .Title }}" />
   {{- if .IsPage }}
-  <meta name="twitter:description" content="{{ .Summary | plainify | htmlUnescape | truncate 200 }}" />
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 200 }}{{ end }}" />
   {{- else }}
   <meta name="twitter:description" content="{{ .Title }} — Research Scientist working on Computer Vision and 3D Perception" />
   {{- end }}
@@ -81,6 +81,9 @@
     "headline": "{{ .Title }}",
     "datePublished": "{{ .Date.Format "2006-01-02" }}",
     "url": "{{ .Permalink }}",
+    {{- if .Description }}
+    "description": "{{ .Description }}",
+    {{- end }}
     {{- if .Params.img }}
     "image": "{{ .Params.img | absURL }}",
     {{- end }}

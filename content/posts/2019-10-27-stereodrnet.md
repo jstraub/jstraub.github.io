@@ -3,6 +3,7 @@ title: "StereoDRNet: Dilated Residual StereoNet"
 img: "/images/stereodrnet.png"
 page: "https://openaccess.thecvf.com/content_CVPR_2019/papers/Chabra_StereoDRNet_Dilated_Residual_StereoNet_CVPR_2019_paper.pdf"
 date: 2019-10-27
+description: "StereoDRNet enables the estimation of metrically accurate depth maps enabling high-quality reconstruction by passive stereo video."
 draft: false
 ---
 [Rohan Chabra](https://scholar.google.com/citations?user=A3x7UAYAAAAJ), 

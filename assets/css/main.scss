@@ -216,6 +216,7 @@ figcaption {
 
     img {
       width: 100%;
+      height: auto;
       border-radius: 4px;
     }
   }
@@ -248,6 +249,18 @@ figcaption {
 .paper-list + p a {
   font-size: 0.9em;
   opacity: 0.6;
+}
+
+// -------------- TABLET BREAKPOINT -------------- //
+@media (max-width: 768px) {
+  .w { padding: 2rem 1.2rem; }
+
+  .profile-img { width: 40%; }
+
+  .paper-item .paper-thumb {
+    flex: 0 0 30%;
+    padding-right: 0.8rem;
+  }
 }
 
 // -------------- MOBILE PAPER LIST -------------- //

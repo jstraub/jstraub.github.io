@@ -29,7 +29,7 @@
         {{- range $post := $posts -}}
 		<article class="paper-item">
 			<div class="paper-thumb">
-    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" loading="lazy" />
+    			<img src="{{ .Params.img }}" alt="{{ $post.Title }}" loading="lazy" width="600" height="450" />
 			</div>
 			<div class="paper-info">
             		<a class="paper-title" href="{{ .Params.page }}">{{ $post.Title }}</a>

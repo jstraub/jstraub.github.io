@@ -3,6 +3,7 @@ title: "Efficient Global Point Cloud Alignment using Bayesian Nonparametric Mixt
 img: "/images/global-pc-align.png"
 page: "http://openaccess.thecvf.com/content_cvpr_2017/papers/Straub_Efficient_Global_Point_CVPR_2017_paper.pdf"
 date: 2016-03-15
+description: "Use branch-and-bound to globally align two point clouds using nonparametric distribution estimates of their point and normal distributions."
 draft: false
 ---
 **Julian Straub**, 

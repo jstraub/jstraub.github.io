@@ -3,6 +3,7 @@ title: "Fast Relocalization for Visual Odometry using Binary Features"
 img: "/images/fast_reloc.png"
 page: "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=ead7fff772dfb41233fa5351c8e7fbbec303dc81"
 date: 2013-09-15
+description: "We use locality-sensitive hashing to speed up binary feature retrieval for fast camera relocalization."
 draft: false
 ---
 **Julian Straub**, 

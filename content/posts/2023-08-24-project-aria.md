@@ -3,6 +3,7 @@ title: "Project Aria: A New Tool For Egocentric Multi-Modal AI Research"
 img: "/images/projectaria.png"
 page: "https://www.projectaria.com/"
 date: 2023-08-24
+description: "The Project Aria device from my team at Meta Reality Labs Research is an egocentric, multi-modal data recording and streaming device with the goal to foster and accelerate research. Join Project Aria."
 draft: false
 ---
 [Jakob Engel](https://jakobengel.github.io), 

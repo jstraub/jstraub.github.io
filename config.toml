@@ -29,6 +29,7 @@
     ordered = false
 
 baseURL = "https://jstraub.github.io/"
+languageCode = "en"
 
 [sitemap]
   changefreq = "monthly"

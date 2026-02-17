@@ -3,6 +3,7 @@ title: "EgoLifter: Open-world 3D Segmentation for Egocentric Perception"
 img: "/images/egolifter.png"
 page: "https://egolifter.github.io/"
 date: 2024-03-26
+description: "We show how to reconstruct and instance segment egocentric Project Aria data using Gaussian Splats."
 draft: false
 ---
 [Qiao Gu](https://georgegu1997.github.io), 
