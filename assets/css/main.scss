@@ -266,6 +266,43 @@ figcaption {
   }
 }
 
+// -------------- MENTEE GRID -------------- //
+.mentee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem 1rem;
+  margin: 1rem 0;
+}
+
+.mentee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none !important;
+  transition: opacity 0.15s;
+
+  &:hover { opacity: 0.7; }
+
+  img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  span {
+    margin-top: 0.4rem;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 500px) {
+  .mentee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 // -------------- INLINE CODE AS SUBTLE PILLS -------------- //
 li code, p code {
   display: inline-block;

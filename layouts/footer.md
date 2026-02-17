@@ -14,12 +14,4 @@ Reviewing:
 
 \* outstanding reviewer
 
-## Previous Mentees and Interns
-
-- [Xiaoyang Wu](https://xywu.me/)
-- [Qiao Gu](https://georgegu1997.github.io)
-- [Yiming Xie](https://ymingxie.github.io)
-- [Kejie Li](https://likojack.github.io/kejieli/)
-- [Rohan Chabra](https://scholar.google.com/citations?user=A3x7UAYAAAAJ)
-- [Erik Wijmans](https://wijmans.xyz)
 
