@@ -13,12 +13,12 @@ On his way to MIT, Julian graduated from the [Technische Universität München](
 He did his Diploma thesis in [Eckehard Steinbach](https://www.professoren.tum.de/en/steinbach-eckehard)'s group with the [NavVis](https://www.navvis.com) founding team and in particular with [Sebastian Hilsenbeck](https://scholar.google.de/citations?user=TenY_v0AAAAJ). At Georgia Tech Julian had the pleasure to work with [Frank Daellart](https://dellaert.github.io)'s group.
 
 
-[Email](mailto:jstraub@csail.mit.edu)
-[Resume](/download/JulianStraub_Resume.pdf)
-[CV](/download/JulianStraub_CV.pdf)
 [Scholar](https://scholar.google.de/citations?user=49_cCT8AAAAJ)
-[Twitter](https://x.com/jstraub6)
 [Github](https://github.com/jstraub)
+[LinkedIn](https://www.linkedin.com/in/julian-straub-56b70029)
+[X](https://x.com/jstraub6)
+[Resume](/download/JulianStraub_Resume.pdf)
+[Email](mailto:jstraub@csail.mit.edu)
 {.contact-links}
 
 ## Research
